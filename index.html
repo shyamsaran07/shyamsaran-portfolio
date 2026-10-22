@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N. Shyamsaran | Data Analyst Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f8f7ff;
+            color: #24213b;
+            line-height: 1.7;
+        }
+
+        header {
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 10px #ddd;
+        }
+
+        header h2 {
+            color: #7655e8;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #24213b;
+            margin-left: 18px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #7655e8;
+        }
+
+        section {
+            padding: 65px 8%;
+        }
+
+        .hero {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .tag {
+            color: #7655e8;
+            font-weight: bold;
+            letter-spacing: 2px;
+            font-size: 13px;
+        }
+
+        h1 {
+            font-size: clamp(38px, 7vw, 68px);
+            line-height: 1.15;
+            margin: 18px 0;
+        }
+
+        h1 span {
+            color: #7655e8;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin: 12px 0 25px;
+        }
+
+        p {
+            color: #65627a;
+            max-width: 700px;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 22px;
+            background: #7655e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        .button:hover {
+            background: #5c3bc5;
+        }
+
+        .light {
+            background: white;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 22px #e9e5f5;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .light .card {
+            background: #f8f7ff;
+        }
+
+        .number {
+            color: #7655e8;
+            font-weight: bold;
+        }
+
+        .card h3 {
+            margin: 10px 0;
+        }
+
+        .tags {
+            margin: 15px 0;
+        }
+
+        .tags span {
+            display: inline-block;
+            background: #eae4ff;
+            color: #6745d0;
+            padding: 4px 9px;
+            margin: 4px 3px 0 0;
+            border-radius: 5px;
+            font-size: 12px;
+        }
+
+        .project-link {
+            display: inline-block;
+            color: #7655e8;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 8px;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .footnote {
+            font-size: 13px;
+            margin-top: 20px;
+        }
+
+        footer {
+            padding: 25px 8%;
+            background: #24213b;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        footer a {
+            color: white;
+        }
+
+        @media (max-width: 650px) {
+            header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 12px;
+            }
+
+            section {
+                padding: 45px 6%;
+            }
+
+            h2 {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>Shyamsaran.</h2>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
+
+    <section class="hero" id="home">
+        <p class="tag">WELCOME TO MY PORTFOLIO</p>
+
+        <h1>Hi, I'm <span>N. Shyamsaran</span></h1>
+
+        <h2>Aspiring Data Analyst</h2>
+
+        <p>
+            I am an AI & Data Science student interested in data analysis,
+            Python, data visualization, and solving real-world problems
+            using data. I am currently learning and building my skills.
+        </p>
+
+        <a href="#projects" class="button">Explore My Projects ↗</a>
+    </section>
+
+    <section class="light" id="about">
+        <p class="tag">GET TO KNOW ME</p>
+
+        <h2>About Me</h2>
+
+        <p>
+            I am currently pursuing my studies in Artificial Intelligence
+            and Data Science. I enjoy learning new technologies and
+            understanding how data can help people make better decisions.
+            My current goal is to develop practical data analysis skills
+            and build projects for my portfolio.
+        </p>
+    </section>
+
+    <section id="skills">
+        <p class="tag">WHAT I'M LEARNING</p>
+
+        <h2>My Skills</h2>
+
+        <div class="grid">
+            <article class="card">
+                <h3>Python</h3>
+                <p>Learning programming fundamentals and data analysis.</p>
+            </article>
+
+            <article class="card">
+                <h3>Data Analysis</h3>
+                <p>Learning to explore data and identify useful patterns.</p>
+            </article>
+
+            <article class="card">
+                <h3>Pandas</h3>
+                <p>Working with tables, datasets, and calculations.</p>
+            </article>
+
+            <article class="card">
+                <h3>Data Visualization</h3>
+                <p>Learning to present data through charts and graphs.</p>
+            </article>
+        </div>
+    </section>
+
+    <section class="light" id="projects">
+        <p class="tag">MY WORK</p>
+
+        <h2>Selected Projects</h2>
+
+        <div class="grid">
+
+            <article class="card">
+                <span class="number">01</span>
+
+                <h3>Sales Data Analysis</h3>
+
+                <p>
+                    Analyzed sample sales data using Python to calculate
+                    revenue, compare product sales, and explore monthly
+                    sales trends.
+                </p>
+
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Pandas</span>
+                    <span>Matplotlib</span>
+                </div>
+
+                <a href="sales_report.csv"
+                   class="project-link"
+                   download>
+                    Download Sales Report ↓
+                </a>
+
+                <br>
+
+                <a href="product_sales.png"
+                   class="project-link"
+                   target="_blank">
+                    View Sales Chart ↗
+                </a>
+            </article>
+
+            <article class="card">
+                <span class="number">02</span>
+
+                <h3>Customer Insights</h3>
+
+                <p>
+                    A future project idea to explore customer data,
+                    discover patterns, and understand customer behaviour.
+                </p>
+
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Data Analysis</span>
+                </div>
+            </article>
+
+            <article class="card">
+                <span class="number">03</span>
+
+                <h3>Interactive Dashboard</h3>
+
+                <p>
+                    A future project idea to display important business
+                    information through charts and visual reports.
+                </p>
+
+                <div class="tags">
+                    <span>Power BI</span>
+                    <span>Visualization</span>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="footnote">
+            Note: Sales Data Analysis uses sample data.
+            Customer Insights and Interactive Dashboard are future project ideas.
+        </p>
+    </section>
+
+    <section id="contact">
+        <p class="tag">LET'S CONNECT</p>
+
+        <h2>Contact Me</h2>
+
+        <p>
+            I am interested in learning, collaborating on projects,
+            and exploring opportunities in data analysis.
+        </p>
+
+        <a href="mailto:your.email@example.com" class="button">
+            Send Me an Email ↗
+        </a>
+
+        <p class="footnote">
+            Replace your.email@example.com with your own email address
+            when you are ready.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    <span>© 2026 N. Shyamsaran</span>
+    <span>Made with curiosity ♡</span>
+    <a href="#home">Back to top ↑</a>
+</footer>
+
+</body>
+</html>
