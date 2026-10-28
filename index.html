@@ -1,207 +1,468 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#0b1020">
-<title>Shyamsaran | Data Analyst Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shyamsaran's portfolio - AI and Data Science student aspiring to become a Data Analyst.">
+  <title>Shyamsaran | Data Analyst Portfolio</title>  <style>
+    :root {
+      --bg: #0b0b12;
+      --card: #151522;
+      --text: #f5f3ff;
+      --muted: #aaa6bd;
+      --accent: #b69cff;
+      --border: #29263b;
+    }
 
-<style>
-*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
-body{font-family:Arial,sans-serif;background:#0b1020;color:#fff;line-height:1.7}
-header{background:#151b32;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
-.logo{font-size:24px;color:#a99aff;font-weight:bold}
-nav{display:flex;flex-wrap:wrap;gap:14px}
-nav a{color:white;text-decoration:none;font-size:14px}
-nav a:hover{color:#a99aff}
-section{padding:65px 8%;scroll-margin-top:20px}
-.hero{min-height:80vh;display:flex;flex-direction:column;justify-content:center;background:linear-gradient(135deg,#11172e,#292052)}
-.tag{color:#b4a5ff;letter-spacing:3px;font-size:13px}
-h1{font-size:clamp(38px,7vw,65px);line-height:1.2;margin:15px 0}
-h1 span{color:#a99aff}
-h2{font-size:30px;margin:12px 0 22px}
-p{color:#c8cce0}
-.hero p{max-width:650px}
-.btn{display:inline-block;background:#8872ff;color:white;padding:11px 18px;border-radius:8px;text-decoration:none;margin:18px 10px 0 0;border:1px solid transparent}
-.btn:hover{background:#6e57ed}
-.secondary{background:transparent;border-color:#8872ff}
-.light{background:#11172b}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#191f39;border:1px solid #303653;padding:22px;border-radius:13px;transition:transform .2s,border-color .2s}
-.card:hover{transform:translateY(-4px);border-color:#8872ff}
-.card h3{margin-bottom:8px}
-.card p{font-size:14px}
-.badge{display:inline-block;background:#302752;color:#d0c7ff;padding:4px 9px;border-radius:5px;margin:10px 5px 0 0;font-size:12px}
-.link{display:inline-block;color:#b5a7ff;text-decoration:none;margin-top:12px;margin-right:10px}
-.link:hover{text-decoration:underline}
-.cert-preview{width:100%;height:180px;object-fit:contain;background:#101529;border-radius:8px;margin-bottom:15px}
-footer{padding:22px 8%;background:#070a14;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
-footer a{color:#b5a7ff}
-@media(max-width:600px){
-header{flex-direction:column}
-nav{justify-content:center;gap:10px}
-section{padding:45px 6%}
-h2{font-size:26px}
-}
-</style>
-</head>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
 
-<body>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-<header>
-<div class="logo">NS.</div>
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#interests">Interests</a>
-<a href="#certificates">Certificates</a>
-<a href="#resume">Resume</a>
-<a href="#contact">Contact</a>
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      padding: 18px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      border-bottom: 1px solid var(--border);
+      background: #0b0b12;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+      color: var(--accent);
+    }
+
+    nav {
+      display: flex;
+      gap: 17px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--text);
+      font-size: 14px;
+    }
+
+    section {
+      padding: 65px 8%;
+      scroll-margin-top: 20px;
+    }
+
+    .hero {
+      min-height: 75vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+
+    .tag {
+      color: var(--accent);
+      font-weight: bold;
+      letter-spacing: 2px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 65px);
+      line-height: 1.2;
+      margin: 15px 0;
+    }
+
+    h1 span, h2 span {
+      color: var(--accent);
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 22px;
+    }
+
+    p {
+      color: var(--muted);
+      max-width: 750px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 11px 19px;
+      border-radius: 9px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #151020;
+      font-weight: bold;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      padding: 23px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+
+    .card p {
+      margin-bottom: 12px;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 5px 11px;
+      margin: 5px 5px 0 0;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    .certificate img {
+      width: 100%;
+      height: 190px;
+      object-fit: contain;
+      background: #fff;
+      border-radius: 8px;
+      margin-bottom: 14px;
+    }
+
+    .certificate .pdf-icon {
+      height: 110px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #211c32;
+      color: var(--accent);
+      border-radius: 8px;
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 14px;
+    }
+
+    .certificate a {
+      display: inline-block;
+      margin-top: 8px;
+      margin-right: 10px;
+    }
+
+    .contact-card {
+      padding: 25px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 8%;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 18px 5%;
+      }
+
+      section {
+        padding: 48px 5%;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      h2 {
+        font-size: 27px;
+      }
+    }
+  </style></head><body>  <header>
+    <a href="#home" class="logo">NS.</a><nav aria-label="Main navigation">
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#certificates">Certificates</a>
+  <a href="#resume">Resume</a>
+  <a href="#contact">Contact</a>
 </nav>
-</header>
 
-<section class="hero" id="home">
-<p class="tag">WELCOME TO MY PORTFOLIO</p>
-<h1>Hi, I'm <span>Shyamsaran</span></h1>
-<h2>Aspiring Data Analyst</h2>
-<p>I'm a final-year Artificial Intelligence and Data Science student building my skills in Python, data analysis and data visualization. I'm passionate about learning, solving problems and discovering insights from data.</p>
-<a class="btn" href="#projects">Explore My Projects ↓</a>
-<a class="btn secondary" href="#contact">Contact Me</a>
+  </header>  <main><section class="hero" id="home">
+  <div class="tag">WELCOME TO MY PORTFOLIO</div>
+
+  <h1>Hi, I'm <span>Shyamsaran</span></h1>
+
+  <h2>Aspiring Data Analyst</h2>
+
+  <p>
+    I'm an Artificial Intelligence and Data Science student who is
+    passionate about technology, data, and continuous learning.
+    I'm building my skills to begin my career in data analytics.
+  </p>
+
+  <div class="buttons">
+    <a class="btn" href="#projects">Explore My Work</a>
+    <a class="btn secondary" href="#contact">Contact Me</a>
+  </div>
 </section>
 
-<section class="light" id="about">
-<p class="tag">ABOUT ME</p>
-<h2>Who Am I?</h2>
-<p>I'm pursuing a B.Tech in Artificial Intelligence and Data Science at Mahendra College of Engineering. I'm developing my technical knowledge through continuous learning and practical projects, with a career interest in data analytics.</p>
+<section id="about">
+  <h2>About <span>Me</span></h2>
+
+  <div class="card">
+    <p>
+      I'm currently pursuing my B.Tech in Artificial Intelligence
+      and Data Science. I'm interested in understanding data,
+      discovering useful insights, and solving real-world problems.
+      My goal is to develop practical analytical skills and grow
+      into a skilled Data Analyst.
+    </p>
+  </div>
 </section>
 
 <section id="education">
-<p class="tag">MY ACADEMIC JOURNEY</p>
-<h2>Education</h2>
-<div class="grid">
-<div class="card">
-<h3>Mahendra College of Engineering</h3>
-<p>B.Tech — Artificial Intelligence and Data Science</p>
-<p>Currently pursuing 4th Year</p>
-<span class="badge">AI & Data Science</span>
-</div>
-</div>
+  <h2>My <span>Education</span></h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>B.Tech — Artificial Intelligence and Data Science</h3>
+      <p>Mahendra College of Engineering</p>
+      <p>Currently studying — 4th year</p>
+    </div>
+  </div>
 </section>
 
-<section class="light" id="skills">
-<p class="tag">WHAT I'M LEARNING</p>
-<h2>Technical Skills</h2>
-<div class="grid">
-<div class="card"><h3>Python</h3><p>Programming fundamentals and data processing.</p></div>
-<div class="card"><h3>Data Analysis</h3><p>Exploring datasets and identifying patterns.</p></div>
-<div class="card"><h3>Pandas</h3><p>Learning to work with tabular data.</p></div>
-<div class="card"><h3>Data Visualization</h3><p>Learning to present insights through charts.</p></div>
-</div>
+<section id="skills">
+  <h2>My <span>Skills</span></h2>
+
+  <div class="card">
+    <span class="pill">Python — Learning</span>
+    <span class="pill">SQL — Learning</span>
+    <span class="pill">Excel — Learning</span>
+    <span class="pill">Data Analysis — Learning</span>
+    <span class="pill">Artificial Intelligence</span>
+    <span class="pill">Problem Solving</span>
+    <span class="pill">Communication</span>
+  </div>
+
+  <p style="margin-top: 15px;">
+    I am continuously developing my technical skills through
+    practice, learning, and projects.
+  </p>
 </section>
 
 <section id="projects">
-<p class="tag">MY WORK</p>
-<h2>Projects</h2>
-<div class="grid">
-<div class="card">
-<h3>Sales Data Analysis</h3>
-<p>A sample-data project exploring product sales and revenue trends.</p>
-<span class="badge">Python</span>
-<span class="badge">Pandas</span>
-<span class="badge">Matplotlib</span>
-<br><a class="link" href="sales_report.csv" download>Download Report ↓</a>
-<br><a class="link" href="product_sales.png" target="_blank" rel="noopener">View Chart ↗</a>
-</div>
-<div class="card">
-<h3>Customer Insights</h3>
-<p>A planned project to explore customer data and identify behavioural patterns.</p>
-<span class="badge">Python</span><span class="badge">Analytics</span>
-</div>
-<div class="card">
-<h3>Interactive Dashboard</h3>
-<p>A planned project to visualize useful business information using dashboards.</p>
-<span class="badge">Power BI</span><span class="badge">Visualization</span>
-</div>
-</div>
-<p style="margin-top:18px">Note: The sales project uses sample data. Other projects are planned and not yet completed.</p>
-</section>
+  <h2>My <span>Projects</span></h2>
 
-<section class="light" id="interests">
-<p class="tag">AREAS OF INTEREST</p>
-<h2>Research Interests</h2>
-<div class="grid">
-<div class="card"><h3>Data Analytics</h3><p>Finding patterns and insights in data.</p></div>
-<div class="card"><h3>Artificial Intelligence</h3><p>Exploring AI techniques for practical problems.</p></div>
-<div class="card"><h3>Data Visualization</h3><p>Presenting information using clear charts and dashboards.</p></div>
-</div>
+  <div class="grid">
+    <div class="card">
+      <h3>Personal Portfolio Website</h3>
+      <p>
+        A personal website showcasing my education, interests,
+        skills, certificates, and career goals.
+      </p>
+      <span class="pill">HTML</span>
+      <span class="pill">CSS</span>
+      <span class="pill">GitHub Pages</span>
+    </div>
+
+    <div class="card">
+      <h3>Data Analytics — Learning Project</h3>
+      <p>
+        I am working towards building projects involving data
+        cleaning, analysis, visualization, and meaningful insights.
+      </p>
+      <span class="pill">Python</span>
+      <span class="pill">SQL</span>
+      <span class="pill">Excel</span>
+    </div>
+  </div>
 </section>
 
 <section id="certificates">
-<p class="tag">MY ACHIEVEMENTS</p>
-<h2>Certificates</h2>
-<p style="margin-bottom:22px">Courses, training and learning achievements.</p>
+  <h2>My <span>Certificates</span></h2>
 
-<div class="grid">
+  <div class="grid">
 
-<div class="card">
-<img class="cert-preview" src="certificate1.jpg" alt="Certificate 1 preview">
-<h3>Certificate 01</h3>
-<p>Replace with the actual course or certificate title.</p>
-<a class="link" href="certificate1.jpg" target="_blank" rel="noopener">View Certificate ↗</a>
-</div>
+    <div class="card certificate">
+      <img
+        src="WhatsApp%20Image%202026-10-28%20at%207.48.38%20PM.jpeg"
+        alt="Certificate 1"
+        loading="lazy"
+      >
+      <h3>Certificate 1</h3>
+      <p>Certificate achievement</p>
+      <a
+        href="WhatsApp%20Image%202026-10-28%20at%207.48.38%20PM.jpeg"
+        target="_blank"
+        rel="noopener"
+      >View Certificate</a>
+    </div>
 
-<div class="card">
-<img class="cert-preview" src="certificate2.jpg" alt="Certificate 2 preview">
-<h3>Certificate 02</h3>
-<p>Replace with the actual course or certificate title.</p>
-<a class="link" href="certificate2.jpg" target="_blank" rel="noopener">View Certificate ↗</a>
-</div>
+    <div class="card certificate">
+      <img
+        src="WhatsApp%20Image%202026-10-28%20at%207.48.39%20PM.jpeg"
+        alt="Certificate 2"
+        loading="lazy"
+      >
+      <h3>Certificate 2</h3>
+      <p>Certificate achievement</p>
+      <a
+        href="WhatsApp%20Image%202026-10-28%20at%207.48.39%20PM.jpeg"
+        target="_blank"
+        rel="noopener"
+      >View Certificate</a>
+    </div>
 
-<div class="card">
-<div style="font-size:55px;text-align:center;padding:25px">📄</div>
-<h3>Certificate PDF 01</h3>
-<p>View or download your third certificate.</p>
-<a class="link" href="certificate3.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
-<a class="link" href="certificate3.pdf" download>Download ↓</a>
-</div>
+    <div class="card certificate">
+      <div class="pdf-icon">PDF</div>
+      <h3>C++ Certificate</h3>
+      <p>PDF certificate document</p>
+      <a
+        href="Shyam%20Saran%20N%20C%2B%2B%20Certificate.pdf"
+        target="_blank"
+        rel="noopener"
+      >View Certificate</a>
+      <a
+        href="Shyam%20Saran%20N%20C%2B%2B%20Certificate.pdf"
+        download
+      >Download</a>
+    </div>
 
-<div class="card">
-<div style="font-size:55px;text-align:center;padding:25px">📄</div>
-<h3>Certificate PDF 02</h3>
-<p>View or download your fourth certificate.</p>
-<a class="link" href="certificate4.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
-<a class="link" href="certificate4.pdf" download>Download ↓</a>
-</div>
+    <div class="card certificate">
+      <div class="pdf-icon">PDF</div>
+      <h3>TATA Certificate</h3>
+      <p>PDF certificate document</p>
+      <a
+        href="TATA%20certificate.saran.pdf"
+        target="_blank"
+        rel="noopener"
+      >View Certificate</a>
+      <a
+        href="TATA%20certificate.saran.pdf"
+        download
+      >Download</a>
+    </div>
 
-</div>
-<p style="margin-top:18px">Remember to upload all four genuine certificate files to the repository using the filenames shown above.</p>
+  </div>
 </section>
 
-<section class="light" id="resume">
-<p class="tag">MY RESUME</p>
-<h2>Resume</h2>
-<p>View or download my resume.</p>
-<a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Resume ↗</a>
-<a class="btn secondary" href="resume.pdf" download>Download Resume ↓</a>
-<p style="margin-top:12px;font-size:13px">Upload your resume PDF to the repository as resume.pdf.</p>
+<section id="resume">
+  <h2>My <span>Resume</span></h2>
+
+  <div class="card">
+    <h3>Want to know more about me?</h3>
+    <p>
+      View or download my resume to learn more about my education,
+      skills, and experience.
+    </p>
+
+    <div class="buttons">
+      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">
+        View Resume
+      </a>
+
+      <a class="btn secondary" href="resume.pdf" download>
+        Download Resume
+      </a>
+    </div>
+
+    <p style="margin-top: 14px; font-size: 13px;">
+      If the resume doesn't open, check that the file is named
+      exactly resume.pdf and is in the repository's main folder.
+    </p>
+  </div>
+</section>
+
+<section id="interests">
+  <h2>My <span>Interests</span></h2>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Data Analytics</h3>
+      <p>Learning to transform raw data into useful insights.</p>
+    </div>
+
+    <div class="card">
+      <h3>Artificial Intelligence</h3>
+      <p>Exploring AI concepts and practical applications.</p>
+    </div>
+
+    <div class="card">
+      <h3>Technology</h3>
+      <p>Building projects and learning new technologies.</p>
+    </div>
+  </div>
 </section>
 
 <section id="contact">
-<p class="tag">LET'S CONNECT</p>
-<h2>Contact Me</h2>
-<p>I'm interested in learning, collaborating on projects and exploring opportunities in data analytics.</p>
-<a class="btn" href="mailto:your.email@example.com">Send Me an Email ↗</a>
-<p style="margin-top:12px;font-size:13px">Replace the sample email address with your actual email address.</p>
+  <h2>Contact <span>Me</span></h2>
+
+  <div class="contact-card">
+    <p>
+      I'm interested in learning opportunities, projects, and
+      connecting with people in the technology field.
+    </p>
+
+    <p style="margin-top: 15px;">
+      Email:
+      <a href="mailto:your.email@example.com">
+        your.email@example.com
+      </a>
+    </p>
+
+    <p style="margin-top: 10px;">
+      Replace the example email above with your real contact email
+      before sharing your portfolio professionally.
+    </p>
+  </div>
 </section>
 
-<footer>
-<span>© 2026 Shyamsaran</span>
-<span>Learning • Building • Growing</span>
-<a href="#home">Back to Top ↑</a>
-</footer>
-
-</body>
+  </main>  <footer>
+    © 2026 Shyamsaran | Built with curiosity ♡
+  </footer></body>
 </html>
