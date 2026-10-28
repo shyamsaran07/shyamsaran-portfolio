@@ -1,11 +1,15 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shyamsaran | Portfolio</title><style>
+<meta name="theme-color" content="#0b1020">
+<title>Shyamsaran | Data Analyst Portfolio</title>
+
+<style>
 *{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
 body{font-family:Arial,sans-serif;background:#0b1020;color:#fff;line-height:1.7}
-header{background:#151b32;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+header{background:#151b32;padding:18px 7%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px}
 .logo{font-size:24px;color:#a99aff;font-weight:bold}
 nav{display:flex;flex-wrap:wrap;gap:14px}
 nav a{color:white;text-decoration:none;font-size:14px}
@@ -18,44 +22,63 @@ h1 span{color:#a99aff}
 h2{font-size:30px;margin:12px 0 22px}
 p{color:#c8cce0}
 .hero p{max-width:650px}
-.btn{display:inline-block;background:#8872ff;color:white;padding:11px 18px;border-radius:8px;text-decoration:none;margin:18px 10px 0 0}
+.btn{display:inline-block;background:#8872ff;color:white;padding:11px 18px;border-radius:8px;text-decoration:none;margin:18px 10px 0 0;border:1px solid transparent}
 .btn:hover{background:#6e57ed}
-.secondary{background:transparent;border:1px solid #8872ff}
+.secondary{background:transparent;border-color:#8872ff}
 .light{background:#11172b}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#191f39;border:1px solid #303653;padding:22px;border-radius:13px}
+.card{background:#191f39;border:1px solid #303653;padding:22px;border-radius:13px;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:#8872ff}
 .card h3{margin-bottom:8px}
 .card p{font-size:14px}
 .badge{display:inline-block;background:#302752;color:#d0c7ff;padding:4px 9px;border-radius:5px;margin:10px 5px 0 0;font-size:12px}
-.link{display:inline-block;color:#b5a7ff;text-decoration:none;margin-top:12px}
+.link{display:inline-block;color:#b5a7ff;text-decoration:none;margin-top:12px;margin-right:10px}
+.link:hover{text-decoration:underline}
+.cert-preview{width:100%;height:180px;object-fit:contain;background:#101529;border-radius:8px;margin-bottom:15px}
 footer{padding:22px 8%;background:#070a14;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 footer a{color:#b5a7ff}
-@media(max-width:600px){header{flex-direction:column}nav{justify-content:center;gap:10px}section{padding:45px 6%}}
-</style></head><body><header>
-<div class="logo">Shyamsaran.</div>
+@media(max-width:600px){
+header{flex-direction:column}
+nav{justify-content:center;gap:10px}
+section{padding:45px 6%}
+h2{font-size:26px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">NS.</div>
 <nav>
 <a href="#home">Home</a>
 <a href="#about">About</a>
 <a href="#education">Education</a>
 <a href="#skills">Skills</a>
 <a href="#projects">Projects</a>
-<a href="#research">Interests</a>
+<a href="#interests">Interests</a>
 <a href="#certificates">Certificates</a>
 <a href="#resume">Resume</a>
 <a href="#contact">Contact</a>
 </nav>
-</header><section class="hero" id="home">
+</header>
+
+<section class="hero" id="home">
 <p class="tag">WELCOME TO MY PORTFOLIO</p>
 <h1>Hi, I'm <span>Shyamsaran</span></h1>
 <h2>Aspiring Data Analyst</h2>
-<p>I am a final-year Artificial Intelligence and Data Science student learning Python, data analysis, and data visualization. I enjoy exploring data and finding useful insights.</p>
+<p>I'm a final-year Artificial Intelligence and Data Science student building my skills in Python, data analysis and data visualization. I'm passionate about learning, solving problems and discovering insights from data.</p>
 <a class="btn" href="#projects">Explore My Projects ↓</a>
 <a class="btn secondary" href="#contact">Contact Me</a>
-</section><section id="about" class="light">
+</section>
+
+<section class="light" id="about">
 <p class="tag">ABOUT ME</p>
 <h2>Who Am I?</h2>
-<p>I am a B.Tech Artificial Intelligence and Data Science student at Mahendra College of Engineering. I am developing my technical knowledge through practice and small projects. My career interest is data analytics, and I want to use data to understand problems and support better decisions.</p>
-</section><section id="education">
+<p>I'm pursuing a B.Tech in Artificial Intelligence and Data Science at Mahendra College of Engineering. I'm developing my technical knowledge through continuous learning and practical projects, with a career interest in data analytics.</p>
+</section>
+
+<section id="education">
 <p class="tag">MY ACADEMIC JOURNEY</p>
 <h2>Education</h2>
 <div class="grid">
@@ -66,79 +89,119 @@ footer a{color:#b5a7ff}
 <span class="badge">AI & Data Science</span>
 </div>
 </div>
-</section><section id="skills" class="light">
+</section>
+
+<section class="light" id="skills">
 <p class="tag">WHAT I'M LEARNING</p>
 <h2>Technical Skills</h2>
 <div class="grid">
-<div class="card"><h3>Python</h3><p>Programming fundamentals and basic data processing.</p></div>
-<div class="card"><h3>Data Analysis</h3><p>Exploring data and finding patterns.</p></div>
-<div class="card"><h3>Pandas</h3><p>Working with tables and datasets.</p></div>
-<div class="card"><h3>Matplotlib</h3><p>Creating charts and visual reports.</p></div>
+<div class="card"><h3>Python</h3><p>Programming fundamentals and data processing.</p></div>
+<div class="card"><h3>Data Analysis</h3><p>Exploring datasets and identifying patterns.</p></div>
+<div class="card"><h3>Pandas</h3><p>Learning to work with tabular data.</p></div>
+<div class="card"><h3>Data Visualization</h3><p>Learning to present insights through charts.</p></div>
 </div>
-</section><section id="projects">
+</section>
+
+<section id="projects">
 <p class="tag">MY WORK</p>
 <h2>Projects</h2>
 <div class="grid">
 <div class="card">
 <h3>Sales Data Analysis</h3>
-<p>Analyzed sample sales data using Python to explore product sales and revenue trends.</p>
-<span class="badge">Python</span><span class="badge">Pandas</span><span class="badge">Matplotlib</span>
-<br><a class="link" href="sales_report.csv" download>Download Sales Report ↓</a>
-<br><a class="link" href="product_sales.png" target="_blank">View Sales Chart ↗</a>
+<p>A sample-data project exploring product sales and revenue trends.</p>
+<span class="badge">Python</span>
+<span class="badge">Pandas</span>
+<span class="badge">Matplotlib</span>
+<br><a class="link" href="sales_report.csv" download>Download Report ↓</a>
+<br><a class="link" href="product_sales.png" target="_blank" rel="noopener">View Chart ↗</a>
 </div>
 <div class="card">
 <h3>Customer Insights</h3>
-<p>Future project idea: explore customer data and discover behaviour patterns.</p>
+<p>A planned project to explore customer data and identify behavioural patterns.</p>
 <span class="badge">Python</span><span class="badge">Analytics</span>
 </div>
 <div class="card">
 <h3>Interactive Dashboard</h3>
-<p>Future project idea: build a dashboard to display useful business information.</p>
+<p>A planned project to visualize useful business information using dashboards.</p>
 <span class="badge">Power BI</span><span class="badge">Visualization</span>
 </div>
 </div>
-<p style="margin-top:18px">Note: Sales Data Analysis is a sample-data project. The other two are planned projects.</p>
-</section><section id="research" class="light">
+<p style="margin-top:18px">Note: The sales project uses sample data. Other projects are planned and not yet completed.</p>
+</section>
+
+<section class="light" id="interests">
 <p class="tag">AREAS OF INTEREST</p>
 <h2>Research Interests</h2>
 <div class="grid">
-<div class="card"><h3>Data Analytics</h3><p>Finding patterns and useful insights in data.</p></div>
-<div class="card"><h3>Artificial Intelligence</h3><p>Exploring AI methods for solving practical problems.</p></div>
-<div class="card"><h3>Data Visualization</h3><p>Presenting data through clear charts and dashboards.</p></div>
+<div class="card"><h3>Data Analytics</h3><p>Finding patterns and insights in data.</p></div>
+<div class="card"><h3>Artificial Intelligence</h3><p>Exploring AI techniques for practical problems.</p></div>
+<div class="card"><h3>Data Visualization</h3><p>Presenting information using clear charts and dashboards.</p></div>
 </div>
-</section><section id="certificates">
+</section>
+
+<section id="certificates">
 <p class="tag">MY ACHIEVEMENTS</p>
 <h2>Certificates</h2>
+<p style="margin-bottom:22px">Courses, training and learning achievements.</p>
+
 <div class="grid">
+
 <div class="card">
+<img class="cert-preview" src="certificate1.jpg" alt="Certificate 1 preview">
 <h3>Certificate 01</h3>
-<p>Add the title of a course or training certificate you have completed.</p>
+<p>Replace with the actual course or certificate title.</p>
+<a class="link" href="certificate1.jpg" target="_blank" rel="noopener">View Certificate ↗</a>
 </div>
+
 <div class="card">
+<img class="cert-preview" src="certificate2.jpg" alt="Certificate 2 preview">
 <h3>Certificate 02</h3>
-<p>Add another genuine certificate or workshop achievement here.</p>
+<p>Replace with the actual course or certificate title.</p>
+<a class="link" href="certificate2.jpg" target="_blank" rel="noopener">View Certificate ↗</a>
 </div>
+
 <div class="card">
-<h3>Certificate 03</h3>
-<p>You can add more certificates when you have the files ready.</p>
+<div style="font-size:55px;text-align:center;padding:25px">📄</div>
+<h3>Certificate PDF 01</h3>
+<p>View or download your third certificate.</p>
+<a class="link" href="certificate3.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+<a class="link" href="certificate3.pdf" download>Download ↓</a>
 </div>
+
+<div class="card">
+<div style="font-size:55px;text-align:center;padding:25px">📄</div>
+<h3>Certificate PDF 02</h3>
+<p>View or download your fourth certificate.</p>
+<a class="link" href="certificate4.pdf" target="_blank" rel="noopener">Open PDF ↗</a>
+<a class="link" href="certificate4.pdf" download>Download ↓</a>
 </div>
-<p style="margin-top:18px">These are placeholders, not actual certificates. Replace them with your real achievements.</p>
-</section><section id="resume" class="light">
+
+</div>
+<p style="margin-top:18px">Remember to upload all four genuine certificate files to the repository using the filenames shown above.</p>
+</section>
+
+<section class="light" id="resume">
 <p class="tag">MY RESUME</p>
 <h2>Resume</h2>
-<p>My resume will be available to view or download after I upload my PDF file.</p>
-<a class="btn" href="resume.pdf" download>Download My Resume ↓</a>
-<p style="margin-top:12px;font-size:13px">Upload your PDF with the filename resume.pdf for this button to work.</p>
-</section><section id="contact">
+<p>View or download my resume.</p>
+<a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Resume ↗</a>
+<a class="btn secondary" href="resume.pdf" download>Download Resume ↓</a>
+<p style="margin-top:12px;font-size:13px">Upload your resume PDF to the repository as resume.pdf.</p>
+</section>
+
+<section id="contact">
 <p class="tag">LET'S CONNECT</p>
 <h2>Contact Me</h2>
-<p>I'm interested in learning, collaborating on projects, and exploring opportunities in data analytics.</p>
+<p>I'm interested in learning, collaborating on projects and exploring opportunities in data analytics.</p>
 <a class="btn" href="mailto:your.email@example.com">Send Me an Email ↗</a>
-<p style="margin-top:12px;font-size:13px">Replace this sample email address with your actual email address.</p>
-</section><footer>
+<p style="margin-top:12px;font-size:13px">Replace the sample email address with your actual email address.</p>
+</section>
+
+<footer>
 <span>© 2026 Shyamsaran</span>
 <span>Learning • Building • Growing</span>
 <a href="#home">Back to Top ↑</a>
-</footer></body>
+</footer>
+
+</body>
 </html>
