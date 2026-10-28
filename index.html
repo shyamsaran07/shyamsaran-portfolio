@@ -3,552 +3,432 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="N. Shyamsaran — AI & Data Science student and aspiring Data Analyst.">
-<title>N. Shyamsaran | Portfolio</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<title>N. Shyamsaran | Data Analyst Portfolio</title>
 
 <style>
 :root {
-  --bg: #fbf9ff;
+  --purple: #7653d6;
+  --pink: #f3dff0;
+  --light: #faf8ff;
+  --dark: #252137;
+  --muted: #716b80;
   --white: #ffffff;
-  --text: #29233c;
-  --muted: #77718a;
-  --purple: #8064d9;
-  --pink: #ed9dc8;
-  --soft: #f1ebff;
-  --border: #eae3f5;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
   scroll-behavior: smooth;
-  scroll-padding-top: 90px;
 }
 
 body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--light);
+  color: var(--dark);
   line-height: 1.7;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
-button, input, textarea, select {
+button {
   font: inherit;
-}
-
-button, select {
   cursor: pointer;
 }
 
-.container {
-  width: min(1100px, 90%);
-  margin: auto;
-}
-
-section {
-  padding: 78px 0;
-}
-
-h1, h2, h3 {
-  font-family: 'Space Grotesk', sans-serif;
-  line-height: 1.3;
-}
-
-.heading {
-  margin-bottom: 32px;
-}
-
-.eyebrow {
-  color: var(--purple);
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.heading h2 {
-  font-size: clamp(2rem, 4vw, 2.7rem);
-  margin-top: 8px;
-}
-
-.heading p {
-  color: var(--muted);
-  margin-top: 8px;
-}
-
-nav {
+header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(251,249,255,.96);
+  background: rgba(255,255,255,.95);
+  border-bottom: 1px solid #eee6fa;
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
 }
 
-.nav-inner {
-  min-height: 74px;
+nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 16px 22px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
 
 .logo {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 800;
   color: var(--purple);
 }
 
 .nav-links {
   display: flex;
-  gap: 18px;
-  list-style: none;
-  align-items: center;
-}
-
-.nav-links a {
-  color: var(--muted);
-  font-size: .87rem;
+  flex-wrap: wrap;
+  gap: 17px;
+  font-size: 14px;
 }
 
 .nav-links a:hover {
   color: var(--purple);
 }
 
-.menu-button {
-  display: none;
-  background: var(--white);
-  border: 1px solid var(--border);
-  padding: 8px 12px;
-  border-radius: 10px;
+section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 75px 22px;
+  scroll-margin-top: 75px;
 }
 
 .hero {
-  padding: 85px 0;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: .8fr 1.2fr;
-  gap: 55px;
-  align-items: center;
-}
-
-.profile-wrap {
-  display: flex;
-  justify-content: center;
-}
-
-.profile {
-  width: min(290px, 100%);
-  aspect-ratio: 4 / 5;
-  border-radius: 150px 150px 30px 30px;
-  background: linear-gradient(145deg, #e7dcff, #ffe3f1);
-  border: 8px solid white;
-  box-shadow: 0 15px 40px #5a3d8214;
+  min-height: 580px;
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
+  justify-content: space-between;
+  gap: 40px;
 }
 
-.profile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.initials {
-  color: var(--purple);
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 5rem;
-  font-weight: 700;
+.tag {
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 30px;
+  background: var(--pink);
+  color: #6541b7;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 5vw, 4.2rem);
-  letter-spacing: -2px;
-  margin: 12px 0;
+  font-size: clamp(36px, 6vw, 62px);
+  line-height: 1.15;
+  margin-bottom: 18px;
 }
 
 .hero h1 span {
   color: var(--purple);
 }
 
-.hero-role {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
 .hero p {
+  max-width: 570px;
   color: var(--muted);
+  margin-bottom: 25px;
 }
 
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 23px;
+.hero-card {
+  flex-shrink: 0;
+  width: 240px;
+  height: 240px;
+  border-radius: 40% 60% 55% 45%;
+  background: linear-gradient(135deg, #e8d8ff, #f8dce9);
+  display: grid;
+  place-items: center;
+  color: var(--purple);
+  font-size: 66px;
+  font-weight: 800;
+  box-shadow: 0 20px 55px #7653d620;
 }
 
 .btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 11px 17px;
-  border: 1px solid var(--purple);
-  border-radius: 11px;
+  display: inline-block;
+  padding: 12px 19px;
+  border: 0;
+  border-radius: 10px;
   background: var(--purple);
   color: white;
-  font-weight: 700;
-  font-size: .9rem;
+  font-weight: bold;
+  margin: 4px 5px 4px 0;
   transition: .2s;
 }
 
 .btn:hover {
   transform: translateY(-2px);
+  background: #6040bd;
 }
 
 .btn-outline {
   color: var(--purple);
-  background: transparent;
+  background: white;
+  border: 1px solid #d8c9f5;
+}
+
+.btn-outline:hover {
+  color: white;
+}
+
+.section-heading {
+  margin-bottom: 30px;
+}
+
+.section-heading h2 {
+  font-size: 34px;
+  margin-bottom: 6px;
+}
+
+.section-heading p {
+  color: var(--muted);
 }
 
 .grid {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 20px;
 }
 
-.two {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.three {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
 .card {
-  background: var(--white);
-  border: 1px solid var(--border);
+  padding: 25px;
   border-radius: 18px;
-  padding: 24px;
-  box-shadow: 0 5px 20px #49306b08;
-  min-width: 0;
+  background: white;
+  border: 1px solid #eee7f8;
+  box-shadow: 0 8px 30px #33204d08;
 }
 
 .card h3 {
   margin-bottom: 10px;
-  font-size: 1.15rem;
+  font-size: 20px;
 }
 
 .card p {
   color: var(--muted);
 }
 
-.soft-section {
-  background: #f5f0ff;
+.card p + p {
+  margin-top: 8px;
 }
 
-.about-copy p {
-  margin-bottom: 14px;
-}
-
-.info-list {
-  list-style: none;
-}
-
-.info-list li {
-  padding: 8px 0;
-  overflow-wrap: anywhere;
-}
-
-.info-list strong {
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.info-list span {
-  color: var(--muted);
-}
-
-.education-card {
-  border-left: 4px solid var(--purple);
-}
-
-.year {
-  color: var(--purple);
-  font-size: .85rem;
-  font-weight: 700;
-}
-
-.education-card h3 {
-  margin: 12px 0 8px;
-}
-
-.tags {
+.pill-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 15px;
+  gap: 10px;
+  margin-top: 14px;
 }
 
-.tag {
-  background: var(--soft);
-  color: #654ab7;
-  padding: 6px 12px;
+.pill {
+  padding: 7px 13px;
   border-radius: 30px;
-  font-size: .8rem;
-  font-weight: 700;
-}
-
-.skill-icon, .interest-icon {
-  font-size: 2rem;
-  margin-bottom: 12px;
+  background: #f0e9ff;
+  color: #6243b5;
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .project-card {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
-.project-number {
-  color: var(--purple);
-  font-weight: 700;
-  font-size: .8rem;
-  letter-spacing: 1px;
-  margin-bottom: 9px;
+.project-card .project-buttons {
+  margin-top: auto;
+  padding-top: 20px;
 }
 
-.demo {
-  border-top: 1px solid var(--border);
-  margin-top: 16px;
-  padding-top: 15px;
+.project-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 13px;
+  background: #f0e8ff;
+  display: grid;
+  place-items: center;
+  font-size: 24px;
+  margin-bottom: 16px;
 }
 
-.demo label {
-  display: block;
-  font-size: .85rem;
-  font-weight: 700;
-  margin-bottom: 7px;
-}
-
-.demo select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  background: white;
-  color: var(--text);
-}
-
-.result {
-  background: var(--soft);
-  border-radius: 10px;
-  padding: 13px;
-  margin-top: 12px;
-  font-size: .9rem;
-}
-
-.result strong {
-  color: var(--purple);
-}
-
-.interest-card {
-  text-align: center;
-}
-
-.certificate-preview {
-  min-height: 175px;
-  background: linear-gradient(135deg, #eee7ff, #ffeaf5);
-  border-radius: 12px;
-  margin-bottom: 17px;
+.certificate-card {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.certificate-preview img {
-  display: block;
-  width: 100%;
-  height: 210px;
-  object-fit: contain;
-  background: white;
-}
-
-.certificate-placeholder {
-  padding: 20px;
-  text-align: center;
-  color: var(--purple);
-}
-
-.certificate-placeholder span {
-  display: block;
-  font-size: 2.5rem;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .certificate-card .btn {
-  margin-top: 14px;
-}
-
-.resume-box {
-  background: linear-gradient(130deg, #eee6ff, #ffe8f4);
-  padding: 32px;
-  border-radius: 22px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-}
-
-.resume-box p {
-  color: var(--muted);
-  margin-top: 8px;
-}
-
-.contact-item {
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border);
-}
-
-.contact-item:last-child {
-  border-bottom: none;
-}
-
-.contact-item strong {
-  display: block;
-}
-
-.contact-item a {
-  color: var(--purple);
-  overflow-wrap: anywhere;
-}
-
-.contact-form label {
-  display: block;
-  margin: 13px 0 6px;
-  font-weight: 700;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  border: 1px solid var(--border);
-  border-radius: 9px;
-  padding: 12px;
-  background: white;
-  color: var(--text);
-}
-
-.contact-form textarea {
-  min-height: 115px;
-  resize: vertical;
+  margin-top: 18px;
 }
 
 .note {
-  font-size: .82rem;
+  font-size: 13px;
   color: var(--muted);
-  margin-top: 10px;
+  margin-top: 12px;
+}
+
+.contact-box {
+  background: linear-gradient(135deg, #f0e7ff, #fff0f7);
+  border-radius: 22px;
+  padding: 35px;
 }
 
 footer {
-  border-top: 1px solid var(--border);
-  padding: 25px 0;
+  padding: 25px 20px;
   text-align: center;
+  background: white;
   color: var(--muted);
-  font-size: .9rem;
+  border-top: 1px solid #eee7f8;
 }
 
-footer span {
+/* Project demo window */
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 500;
+  background: rgba(24, 18, 40, .7);
+  padding: 20px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-box {
+  background: white;
+  width: min(720px, 100%);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 28px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  right: 18px;
+  top: 12px;
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 50%;
+  background: #f0e9ff;
+  font-size: 24px;
+}
+
+.demo-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.demo-controls label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+select {
+  padding: 10px;
+  border: 1px solid #ddd1f3;
+  border-radius: 8px;
+  background: white;
+  color: var(--dark);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.stat {
+  background: #f5f0ff;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.stat small {
+  color: var(--muted);
+  display: block;
+}
+
+.stat strong {
+  font-size: 22px;
   color: var(--purple);
 }
 
-@media (max-width: 850px) {
-  .nav-links {
-    gap: 10px;
-  }
-
-  .nav-links a {
-    font-size: .8rem;
-  }
-
-  .three {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 14px;
 }
 
-@media (max-width: 650px) {
-  section {
-    padding: 60px 0;
+th, td {
+  padding: 11px;
+  text-align: left;
+  border-bottom: 1px solid #eee7f8;
+}
+
+th {
+  background: #f5f0ff;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 90px 1fr 65px;
+  gap: 10px;
+  align-items: center;
+  margin: 13px 0;
+  font-size: 14px;
+}
+
+.bar-track {
+  height: 13px;
+  background: #eee8fa;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #8a67e8, #e49acb);
+  border-radius: 20px;
+  transition: width .3s;
+}
+
+@media (max-width: 760px) {
+  nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 12px;
   }
 
   .hero {
-    padding: 55px 0;
+    min-height: auto;
+    padding-top: 55px;
+    flex-direction: column-reverse;
+    align-items: flex-start;
   }
 
-  .hero-grid, .two, .three {
+  .hero-card {
+    width: 150px;
+    height: 150px;
+    font-size: 45px;
+    align-self: center;
+  }
+
+  .grid {
     grid-template-columns: 1fr;
   }
 
-  .hero-grid {
-    text-align: center;
-    gap: 28px;
+  section {
+    padding-top: 55px;
+    padding-bottom: 55px;
   }
 
-  .hero p {
-    margin: auto;
+  .stats {
+    grid-template-columns: 1fr;
   }
 
-  .buttons {
-    justify-content: center;
-  }
-
-  .profile {
-    width: 220px;
-  }
-
-  .menu-button {
-    display: block;
-  }
-
-  .nav-inner {
-    flex-wrap: wrap;
-    padding: 12px 0;
-  }
-
-  .nav-links {
-    display: none;
-    width: 100%;
-    align-items: flex-start;
-    flex-direction: column;
-    padding: 8px 0;
-  }
-
-  .nav-links.open {
-    display: flex;
-  }
-
-  .nav-links a {
-    font-size: .95rem;
-  }
-
-  .resume-box {
-    flex-direction: column;
-    align-items: flex-start;
+  .contact-box {
     padding: 24px;
   }
 }
@@ -557,357 +437,500 @@ footer span {
 
 <body>
 
-<!-- NAVIGATION -->
-<nav>
-  <div class="container nav-inner">
+<header>
+  <nav>
     <a class="logo" href="#home">NS.</a>
-
-    <button class="menu-button" id="menuButton"
-      aria-expanded="false" aria-controls="navLinks">☰ Menu</button>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#interests">Interests</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!-- HOME -->
-<header class="hero" id="home">
-  <div class="container hero-grid">
-
-    <div class="profile-wrap">
-      <div class="profile" id="profileBox">
-        <span class="initials">NS.</span>
-      </div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
     </div>
-
-    <div>
-      <span class="eyebrow">Welcome to my portfolio</span>
-      <h1>Hi, I'm <span>N. Shyamsaran</span></h1>
-      <div class="hero-role">AI & Data Science Student | Aspiring Data Analyst</div>
-
-      <p>
-        I'm a final-year Artificial Intelligence and Data Science student
-        at Mahendra College of Engineering. I'm interested in data analysis,
-        problem-solving and learning how to turn data into meaningful insights.
-        I'm building my technical foundation through continuous learning
-        and practical projects.
-      </p>
-
-      <div class="buttons">
-        <a class="btn" href="#projects">Explore Projects ↗</a>
-        <a class="btn btn-outline" href="resume.pdf.pdf" target="_blank" rel="noopener">
-          View Resume
-        </a>
-        <a class="btn btn-outline" href="https://github.com/shyamsaran07"
-           target="_blank" rel="noopener">My GitHub ↗</a>
-      </div>
-    </div>
-
-  </div>
+  </nav>
 </header>
 
 <main>
 
-<!-- ABOUT -->
-<section class="soft-section" id="about">
-  <div class="container">
-    <div class="heading">
-      <span class="eyebrow">Get to know me</span>
-      <h2>About Me</h2>
-    </div>
+<section class="hero" id="home">
+  <div>
+    <span class="tag">AI & DS Student · Aspiring Data Analyst</span>
 
-    <div class="grid two">
-      <article class="card about-copy">
-        <h3>My Journey</h3>
-        <p>
-          I'm N. Shyamsaran, pursuing a B.Tech in Artificial Intelligence
-          and Data Science at Mahendra College of Engineering.
-        </p>
-        <p>
-          My career goal is to become a Data Analyst. I'm interested in
-          working with data, identifying patterns and communicating findings
-          clearly.
-        </p>
-        <p>
-          I'm currently developing my foundations in programming,
-          spreadsheets, SQL and data visualization. I believe in learning
-          through practice and improving one step at a time.
-        </p>
-      </article>
+    <h1>Hello, I'm<br><span>N. Shyamsaran</span></h1>
 
-      <article class="card">
-        <h3>Quick Information</h3>
-        <ul class="info-list">
-          <li><strong>Name:</strong><span>N. Shyamsaran</span></li>
-          <li><strong>College:</strong><span>Mahendra College of Engineering</span></li>
-          <li><strong>Degree:</strong><span>B.Tech AI & Data Science</span></li>
-          <li><strong>Study year:</strong><span>Final Year</span></li>
-          <li><strong>Career goal:</strong><span>Data Analyst</span></li>
-          <li><strong>GitHub:</strong>
-            <a href="https://github.com/shyamsaran07"
-               target="_blank" rel="noopener">shyamsaran07 ↗</a>
-          </li>
-        </ul>
-      </article>
+    <p>
+      I'm an Artificial Intelligence and Data Science student interested
+      in data analysis, Python, visualisation, and solving real-world
+      problems through data. I'm building my skills one project at a time.
+    </p>
+
+    <a href="#projects" class="btn">Explore Projects</a>
+    <a href="#contact" class="btn btn-outline">Contact Me</a>
+  </div>
+
+  <div class="hero-card" aria-label="NS initials">NS.</div>
+</section>
+
+<section id="about">
+  <div class="section-heading">
+    <h2>About Me</h2>
+    <p>A little about my learning journey.</p>
+  </div>
+
+  <div class="card">
+    <p>
+      I'm pursuing a B.Tech in Artificial Intelligence and Data Science.
+      My current goal is to develop a strong foundation in data analysis,
+      learn practical tools, and create projects that demonstrate my
+      understanding of data.
+    </p>
+
+    <p>
+      I believe consistent practice, curiosity, and learning from mistakes
+      are important steps towards a successful career.
+    </p>
+  </div>
+</section>
+
+<section id="education">
+  <div class="section-heading">
+    <h2>Education</h2>
+    <p>My academic background.</p>
+  </div>
+
+  <div class="card">
+    <h3>B.Tech — Artificial Intelligence and Data Science</h3>
+    <p>Mahendra College of Engineering</p>
+    <p>Fourth Year</p>
+    <div class="pill-list">
+      <span class="pill">Artificial Intelligence</span>
+      <span class="pill">Data Science</span>
+      <span class="pill">Data Analysis</span>
     </div>
   </div>
 </section>
 
-<!-- EDUCATION -->
-<section id="education">
-  <div class="container">
-    <div class="heading">
-      <span class="eyebrow">Academic background</span>
-      <h2>Education</h2>
-      <p>My current qualification.</p>
+<section id="skills">
+  <div class="section-heading">
+    <h2>Skills & Learning</h2>
+    <p>Tools and concepts I'm developing.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>Technical Skills</h3>
+      <div class="pill-list">
+        <span class="pill">Python — Learning</span>
+        <span class="pill">SQL — Learning</span>
+        <span class="pill">Excel — Learning</span>
+        <span class="pill">Data Visualisation</span>
+        <span class="pill">HTML & CSS</span>
+      </div>
     </div>
 
-    <article class="card education-card">
-      <span class="year">Currently Pursuing · Final Year</span>
-      <h3>Bachelor of Technology</h3>
-      <p><strong>Artificial Intelligence and Data Science</strong></p>
-      <p>Mahendra College of Engineering</p>
+    <div class="card">
+      <h3>Areas of Interest</h3>
+      <div class="pill-list">
+        <span class="pill">Data Analytics</span>
+        <span class="pill">Artificial Intelligence</span>
+        <span class="pill">Problem Solving</span>
+        <span class="pill">Dashboard Design</span>
+        <span class="pill">Continuous Learning</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <div class="tags">
-        <span class="tag">Artificial Intelligence</span>
-        <span class="tag">Data Science</span>
-        <span class="tag">Data Analytics</span>
+<section id="projects">
+  <div class="section-heading">
+    <h2>Projects</h2>
+    <p>Try the interactive sample demonstrations below.</p>
+  </div>
+
+  <div class="grid">
+
+    <article class="card project-card">
+      <div class="project-icon">📊</div>
+      <h3>Sales Data Analysis</h3>
+      <p>
+        Explore sample sales data, compare product categories, and see
+        how revenue changes when you select a different category.
+      </p>
+      <div class="pill-list">
+        <span class="pill">Data Analysis</span>
+        <span class="pill">Charts</span>
+        <span class="pill">Business Insights</span>
+      </div>
+      <div class="project-buttons">
+        <button class="btn" data-demo="sales">Open Project Demo ↗</button>
       </div>
     </article>
-  </div>
-</section>
 
-<!-- SKILLS -->
-<section class="soft-section" id="skills">
-  <div class="container">
-    <div class="heading">
-      <span class="eyebrow">My learning journey</span>
-      <h2>Skills & Technologies</h2>
-      <p>My current learning areas and technical interests.</p>
-    </div>
-
-    <div class="grid three">
-      <article class="card">
-        <div class="skill-icon">🐍</div>
-        <h3>Python</h3>
-        <p>Learning programming fundamentals and data handling.</p>
-      </article>
-
-      <article class="card">
-        <div class="skill-icon">🗄️</div>
-        <h3>SQL</h3>
-        <p>Learning queries, filtering and retrieving information.</p>
-      </article>
-
-      <article class="card">
-        <div class="skill-icon">📊</div>
-        <h3>Excel</h3>
-        <p>Exploring spreadsheet formulas and data organization.</p>
-      </article>
-
-      <article class="card">
-        <div class="skill-icon">📈</div>
-        <h3>Power BI</h3>
-        <p>Learning dashboards and data visualization concepts.</p>
-      </article>
-
-      <article class="card">
-        <div class="skill-icon">🧹</div>
-        <h3>Data Cleaning</h3>
-        <p>Understanding data consistency, duplicates and missing values.</p>
-      </article>
-
-      <article class="card">
-        <div class="skill-icon">💡</div>
-        <h3>Problem Solving</h3>
-        <p>Developing logical thinking through regular practice.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="container">
-    <div class="heading">
-      <span class="eyebrow">Practice projects</span>
-      <h2>My Projects</h2>
+    <article class="card project-card">
+      <div class="project-icon">🎓</div>
+      <h3>Student Performance Analysis</h3>
       <p>
-        Interactive sample-data demonstrations. These are practice demos,
-        not completed client projects or real business datasets.
+        Explore sample student scores by subject and understand how
+        average performance can be summarised.
       </p>
-    </div>
+      <div class="pill-list">
+        <span class="pill">Statistics</span>
+        <span class="pill">Performance</span>
+        <span class="pill">Reporting</span>
+      </div>
+      <div class="project-buttons">
+        <button class="btn" data-demo="students">Open Project Demo ↗</button>
+      </div>
+    </article>
 
-    <div class="grid three">
+    <article class="card project-card">
+      <div class="project-icon">🛍️</div>
+      <h3>Customer Insights</h3>
+      <p>
+        Filter sample customer groups and examine purchase totals
+        and average spending.
+      </p>
+      <div class="pill-list">
+        <span class="pill">Customer Analytics</span>
+        <span class="pill">Filtering</span>
+        <span class="pill">Insights</span>
+      </div>
+      <div class="project-buttons">
+        <button class="btn" data-demo="customers">Open Project Demo ↗</button>
+      </div>
+    </article>
 
-      <article class="card project-card">
-        <span class="project-number">PROJECT 01</span>
-        <h3>Sales Data Analysis</h3>
-        <p>Explore sample sales totals and order counts by product category.</p>
-        <div class="tags">
-          <span class="tag">Data Analysis</span>
-          <span class="tag">Sales</span>
-        </div>
-
-        <div class="demo">
-          <label for="salesFilter">Product category</label>
-          <select id="salesFilter">
-            <option value="all">All categories</option>
-            <option value="electronics">Electronics</option>
-            <option value="accessories">Accessories</option>
-            <option value="home">Home</option>
-          </select>
-          <div class="result" id="salesResult" aria-live="polite"></div>
-        </div>
-      </article>
-
-      <article class="card project-card">
-        <span class="project-number">PROJECT 02</span>
-        <h3>Customer Insights</h3>
-        <p>Explore example customer segments and compare their sample spending.</p>
-        <div class="tags">
-          <span class="tag">Customer Data</span>
-          <span class="tag">Insights</span>
-        </div>
-
-        <div class="demo">
-          <label for="customerFilter">Customer segment</label>
-          <select id="customerFilter">
-            <option value="all">All customers</option>
-            <option value="regular">Regular</option>
-            <option value="premium">Premium</option>
-            <option value="occasional">Occasional</option>
-          </select>
-          <div class="result" id="customerResult" aria-live="polite"></div>
-        </div>
-      </article>
-
-      <article class="card project-card">
-        <span class="project-number">PROJECT 03</span>
-        <h3>Regional Data Dashboard</h3>
-        <p>Filter a sample regional dataset and compare order and sales totals.</p>
-        <div class="tags">
-          <span class="tag">Dashboard</span>
-          <span class="tag">Visualization</span>
-        </div>
-
-        <div class="demo">
-          <label for="regionFilter">Region</label>
-          <select id="regionFilter">
-            <option value="all">All regions</option>
-            <option value="chennai">Chennai</option>
-            <option value="coimbatore">Coimbatore</option>
-            <option value="madurai">Madurai</option>
-          </select>
-          <div class="result" id="regionResult" aria-live="polite"></div>
-        </div>
-      </article>
-
-    </div>
   </div>
+
+  <p class="note">
+    Note: These are interactive demonstrations using example data.
+    They are not connected to a live business database.
+  </p>
 </section>
 
-<!-- INTERESTS -->
-<section class="soft-section" id="interests">
-  <div class="container">
-    <div class="heading">
-      <span class="eyebrow">What interests me</span>
-      <h2>Interests</h2>
-    </div>
-
-    <div class="grid three">
-      <article class="card interest-card">
-        <div class="interest-icon">📊</div>
-        <h3>Data Analytics</h3>
-        <p>Understanding trends and discovering insights in data.</p>
-      </article>
-
-      <article class="card interest-card">
-        <div class="interest-icon">🤖</div>
-        <h3>Artificial Intelligence</h3>
-        <p>Exploring AI concepts and their real-world applications.</p>
-      </article>
-
-      <article class="card interest-card">
-        <div class="interest-icon">💻</div>
-        <h3>Technology & Learning</h3>
-        <p>Practising new skills and building useful projects.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATES -->
 <section id="certificates">
-  <div class="container">
-    <div class="heading">
-      <span class="eyebrow">Learning milestones</span>
-      <h2>Certificates</h2>
-      <p>Certificate images and PDF documents from my learning journey.</p>
-    </div>
+  <div class="section-heading">
+    <h2>Certificates</h2>
+    <p>My learning and certifications.</p>
+  </div>
 
-    <div class="grid two">
+  <div class="grid">
 
-      <article class="card certificate-card">
-        <div class="certificate-preview">
-          <img
-            src="./WhatsApp%20Image%202026-10-28%20at%207.48.38%20PM.jpeg"
-            alt="Certificate image 1"
-            loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.hidden=false;">
-          <div class="certificate-placeholder" hidden>
-            <span>🏆</span>
-            Certificate image not found. Check its filename.
-          </div>
-        </div>
-        <h3>Certificate 01</h3>
-        <p>Certificate image.</p>
-      </article>
+    <article class="card certificate-card">
+      <h3>🏅 TATA Certificate</h3>
+      <p>Open the TATA certificate PDF.</p>
+      <a
+        class="btn"
+        href="./TATA%20certificate.saran.pdf"
+        target="_blank"
+        rel="noopener"
+      >View TATA Certificate ↗</a>
+      <p class="note">
+        The PDF file must be uploaded to the repository's root folder.
+      </p>
+    </article>
 
-      <article class="card certificate-card">
-        <div class="certificate-preview">
-          <img
-            src="./WhatsApp%20Image%202026-10-28%20at%207.48.39%20PM.jpeg"
-            alt="Certificate image 2"
-            loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.hidden=false;">
-          <div class="certificate-placeholder" hidden>
-            <span>🏆</span>
-            Certificate image not found. Check its filename.
-          </div>
-        </div>
-        <h3>Certificate 02</h3>
-        <p>Certificate image.</p>
-      </article>
+    <article class="card certificate-card">
+      <h3>🏅 C++ Certificate</h3>
+      <p>Open the C++ certificate PDF.</p>
+      <a
+        class="btn"
+        href="./Shyam%20Saran%20N%20C%2B%2B%20Certificate.pdf"
+        target="_blank"
+        rel="noopener"
+      >View C++ Certificate ↗</a>
+    </article>
 
-      <article class="card certificate-card">
-        <div class="certificate-preview">
-          <div class="certificate-placeholder">
-            <span>📄</span>
-            <strong>C++ Certificate</strong>
-            <p>PDF document</p>
-          </div>
-        </div>
-        <h3>C++ Certificate</h3>
-        <p>Open the original certificate PDF.</p>
-        <a class="btn"
-           href="./Shyam%20Saran%20N%20C%2B%2B%20Certificate.pdf"
-           target="_blank" rel="noopener">View C++ Certificate ↗</a>
-      </article>
+    <article class="card certificate-card">
+      <h3>📜 Certificate Image 1</h3>
+      <p>View the first certificate image.</p>
+      <a
+        class="btn"
+        href="./WhatsApp%20Image%202026-10-28%20at%207.48.38%20PM.jpeg"
+        target="_blank"
+        rel="noopener"
+      >View Certificate Image ↗</a>
+    </article>
 
-      <article class="card certificate-card">
-        <div class="certificate-preview">
-          <div class="certificate-placeholder">
-            <span>📄</span>
-            <strong>TATA Certificate</strong>
-            <p>PDF document</p>
-          <
+    <article class="card certificate-card">
+      <h3>📜 Certificate Image 2</h3>
+      <p>View the second certificate image.</p>
+      <a
+        class="btn"
+        href="./WhatsApp%20Image%202026-10-28%20at%207.48.39%20PM.jpeg"
+        target="_blank"
+        rel="noopener"
+      >View Certificate Image ↗</a>
+    </article>
+
+  </div>
+</section>
+
+<section id="resume">
+  <div class="section-heading">
+    <h2>My Resume</h2>
+    <p>View or save my resume.</p>
+  </div>
+
+  <div class="card">
+    <h3>N. Shyamsaran — Resume</h3>
+    <p>
+      My resume contains my education, skills, projects, and
+      professional information.
+    </p>
+
+    <a
+      class="btn"
+      href="./resume.pdf.pdf"
+      target="_blank"
+      rel="noopener"
+    >Open Resume PDF ↗</a>
+
+    <a
+      class="btn btn-outline"
+      href="./resume.pdf.pdf"
+      download="N-Shyamsaran-Resume.pdf"
+    >Download Resume ↓</a>
+
+    <p class="note">
+      If the PDF doesn't open, check that resume.pdf.pdf exists
+      in the repository's root folder.
+    </p>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="section-heading">
+    <h2>Contact Me</h2>
+    <p>Have an opportunity or want to connect?</p>
+  </div>
+
+  <div class="contact-box">
+    <h3>Let's Connect!</h3>
+    <p>
+      I'm interested in learning, collaborating on projects,
+      and exploring opportunities related to data analysis.
+    </p>
+
+    <a
+      class="btn"
+      href="https://github.com/shyamsaran07"
+      target="_blank"
+      rel="noopener"
+    >Visit My GitHub ↗</a>
+
+    <button class="btn btn-outline" id="emailButton">
+      Send Me an Email
+    </button>
+
+    <p class="note">
+      The email button will work after you add your real email address
+      in the JavaScript setting at the bottom of this file.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> N. Shyamsaran</p>
+  <p>Made with curiosity ♡</p>
+</footer>
+
+<!-- Interactive Project Demo Window -->
+
+<div class="modal" id="demoModal" role="dialog"
+     aria-modal="true" aria-labelledby="demoTitle">
+  <div class="modal-box">
+    <button class="modal-close" id="closeDemo"
+            aria-label="Close project demo">×</button>
+
+    <h2 id="demoTitle">Project Demo</h2>
+    <p id="demoDescription"></p>
+
+    <div class="demo-controls" id="demoControls"></div>
+    <div class="stats" id="demoStats"></div>
+    <div id="demoVisual"></div>
+
+    <p class="note">
+      This demonstration uses sample data for learning purposes.
+    </p>
+  </div>
+</div>
+
+<script>
+/*
+  IMPORTANT:
+  1. Replace the email below with your real Gmail address.
+  2. Keep the PDF and image filenames exactly as they are in GitHub.
+*/
+
+const PORTFOLIO_EMAIL = "YOUR_GMAIL_HERE@gmail.com";
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+document.getElementById("emailButton").addEventListener("click", function () {
+  if (
+    !PORTFOLIO_EMAIL ||
+    PORTFOLIO_EMAIL === "YOUR_GMAIL_HERE@gmail.com"
+  ) {
+    alert("Add your real Gmail address to PORTFOLIO_EMAIL in the code first.");
+    return;
+  }
+
+  window.location.href =
+    "mailto:" + PORTFOLIO_EMAIL +
+    "?subject=" + encodeURIComponent("Portfolio Contact");
+});
+
+const modal = document.getElementById("demoModal");
+const demoTitle = document.getElementById("demoTitle");
+const demoDescription = document.getElementById("demoDescription");
+const demoControls = document.getElementById("demoControls");
+const demoStats = document.getElementById("demoStats");
+const demoVisual = document.getElementById("demoVisual");
+
+const projectData = {
+  sales: {
+    title: "Sales Data Analysis",
+    description: "Filter the sample product category to compare revenue.",
+    options: ["All Categories", "Electronics", "Clothing", "Home"],
+    records: [
+      { category: "Electronics", revenue: 45000, orders: 90 },
+      { category: "Clothing", revenue: 28000, orders: 120 },
+      { category: "Home", revenue: 17000, orders: 55 }
+    ],
+    kind: "sales"
+  },
+
+  students: {
+    title: "Student Performance Analysis",
+    description: "Select a subject to examine sample student scores.",
+    options: ["All Subjects", "Mathematics", "Science", "English"],
+    records: [
+      { category: "Mathematics", score: 82, students: 40 },
+      { category: "Science", score: 76, students: 40 },
+      { category: "English", score: 88, students: 40 }
+    ],
+    kind: "students"
+  },
+
+  customers: {
+    title: "Customer Insights",
+    description: "Filter sample customer groups and compare purchases.",
+    options: ["All Groups", "Regular", "New", "Premium"],
+    records: [
+      { category: "Regular", spend: 12000, customers: 60 },
+      { category: "New", spend: 5000, customers: 50 },
+      { category: "Premium", spend: 25000, customers: 25 }
+    ],
+    kind: "customers"
+  }
+};
+
+function createStat(label, value) {
+  const div = document.createElement("div");
+  div.className = "stat";
+
+  const small = document.createElement("small");
+  small.textContent = label;
+
+  const strong = document.createElement("strong");
+  strong.textContent = value;
+
+  div.append(small, strong);
+  return div;
+}
+
+function createBar(label, value, maximum, suffix) {
+  const row = document.createElement("div");
+  row.className = "bar-row";
+
+  const name = document.createElement("span");
+  name.textContent = label;
+
+  const track = document.createElement("div");
+  track.className = "bar-track";
+
+  const fill = document.createElement("div");
+  fill.className = "bar-fill";
+  fill.style.width =
+    Math.max(0, Math.min(100, (value / maximum) * 100)) + "%";
+
+  track.appendChild(fill);
+
+  const amount = document.createElement("span");
+  amount.textContent = value.toLocaleString("en-IN") + suffix;
+
+  row.append(name, track, amount);
+  return row;
+}
+
+function addTable(records, kind) {
+  const table = document.createElement("table");
+  const thead = document.createElement("thead");
+  const tbody = document.createElement("tbody");
+  const heading = document.createElement("tr");
+
+  let columns;
+
+  if (kind === "sales") {
+    columns = ["Category", "Revenue (₹)", "Orders"];
+  } else if (kind === "students") {
+    columns = ["Subject", "Average Score", "Students"];
+  } else {
+    columns = ["Customer Group", "Purchases (₹)", "Customers"];
+  }
+
+  columns.forEach(function (column) {
+    const th = document.createElement("th");
+    th.textContent = column;
+    heading.appendChild(th);
+  });
+
+  thead.appendChild(heading);
+
+  records.forEach(function (record) {
+    const tr = document.createElement("tr");
+    let values;
+
+    if (kind === "sales") {
+      values = [
+        record.category,
+        record.revenue.toLocaleString("en-IN"),
+        record.orders
+      ];
+    } else if (kind === "students") {
+      values = [
+        record.category,
+        record.score + "%",
+        record.students
+      ];
+    } else {
+      values = [
+        record.category,
+        record.spend.toLocaleString("en-IN"),
+        record.customers
+      ];
+    }
+
+    values.forEach(function (value) {
+      const td = document.createElement("td");
+      td.textContent = value;
+      tr.appendChild(td);
+    });
+
+    tbody.appendChild(tr);
+  });
+
+  table.append(thead, tbody);
+  demoVisual.appendChild(table);
+}
+
+function renderDemo(key, selectedCategory) {
+  const project = projectData[key];
+
+  const recor
