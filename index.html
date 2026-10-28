@@ -4,701 +4,476 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>N. Shyamsaran | Data Analyst Portfolio</title>
-<meta name="description" content="Portfolio of N. Shyamsaran, an AI and Data Science student building data analysis projects.">
+<title>N. Shyamsaran | AI & Data Science Portfolio</title>
+<meta name="description" content="N. Shyamsaran's portfolio showcasing education, skills, data analysis projects and certifications.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg:#f8f7ff;
-  --white:#ffffff;
-  --primary:#7557e8;
-  --dark:#5237c3;
-  --text:#201c35;
-  --muted:#716d82;
-  --border:#e9e5f5;
-  --soft:#eee9ff;
-  --green:#16845b;
-  --shadow:0 12px 35px rgba(55,37,100,.08);
+  --bg: #fbf9ff;
+  --surface: #ffffff;
+  --text: #25213a;
+  --muted: #77718b;
+  --purple: #8064d9;
+  --pink: #ed9dc8;
+  --border: #eee8f7;
+  --soft: #f2edff;
+  --shadow: 0 12px 35px rgba(70, 45, 110, .08);
 }
 
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 
 body {
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
 }
 
-a {
-  color:inherit;
-  text-decoration:none;
+a { color: inherit; text-decoration: none; }
+
+button, input, textarea, select { font: inherit; }
+
+button, select { cursor: pointer; }
+
+.container { width: min(1100px, 90%); margin: auto; }
+
+section { padding: 85px 0; }
+
+.section-heading { margin-bottom: 35px; }
+
+.eyebrow {
+  color: var(--purple);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
-button,select {
-  font:inherit;
+h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.25; }
+
+.section-heading h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-top: 8px;
 }
 
-.container {
-  width:min(1100px,91%);
-  margin:auto;
-}
-
-header {
-  position:sticky;
-  top:0;
-  z-index:100;
-  background:rgba(255,255,255,.96);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid var(--border);
-}
+.section-heading p { color: var(--muted); margin-top: 10px; }
 
 nav {
-  min-height:72px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(251,249,255,.94);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  min-height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .logo {
-  font-size:27px;
-  font-weight:900;
-  color:var(--primary);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--purple);
 }
 
 .nav-links {
-  display:flex;
-  flex-wrap:wrap;
-  gap:16px;
-  list-style:none;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  gap: 23px;
 }
 
-.nav-links a {
-  font-size:12px;
-  font-weight:700;
-  color:var(--muted);
+.nav-links a { font-size: .9rem; color: var(--muted); }
+
+.nav-links a:hover { color: var(--purple); }
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--border);
+  background: white;
+  padding: 8px 12px;
+  border-radius: 10px;
 }
 
-.nav-links a:hover {
-  color:var(--primary);
-}
-
-section {
-  padding:75px 0;
-  scroll-margin-top:80px;
-}
-
-.hero {
-  min-height:570px;
-  display:flex;
-  align-items:center;
-  background:
-    radial-gradient(circle at 12% 20%,#e7dfff,transparent 32%),
-    radial-gradient(circle at 90% 85%,#f6e5ef,transparent 32%),
-    var(--bg);
-}
+.hero { padding: 85px 0 95px; }
 
 .hero-grid {
-  display:grid;
-  grid-template-columns:.85fr 1.4fr;
-  gap:60px;
-  align-items:center;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 60px;
+  align-items: center;
 }
 
-.profile-frame {
-  width:100%;
-  max-width:300px;
-  aspect-ratio:4/5;
-  margin:auto;
-  border:8px solid white;
-  border-radius:28px;
-  box-shadow:var(--shadow);
-  background:linear-gradient(145deg,#e8ddff,#d3c5ff);
-  display:grid;
-  place-items:center;
-  overflow:hidden;
+.profile-wrap { display: flex; justify-content: center; }
+
+.profile {
+  width: min(300px, 100%);
+  aspect-ratio: 4 / 5;
+  border-radius: 150px 150px 35px 35px;
+  background: linear-gradient(145deg, #e9dcff, #ffe3f2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border: 8px solid white;
+  box-shadow: var(--shadow);
 }
 
-.profile-placeholder {
-  text-align:center;
-  color:var(--dark);
-  padding:20px;
+.profile img { width: 100%; height: 100%; object-fit: cover; }
+
+.profile-fallback {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 5rem;
+  color: var(--purple);
+  font-weight: 700;
 }
 
-.profile-placeholder strong {
-  display:block;
-  font-size:70px;
-  line-height:1.2;
+.hero h1 {
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  letter-spacing: -2px;
+  margin: 12px 0;
 }
 
-.profile-placeholder span {
-  font-size:12px;
+.hero h1 span {
+  color: var(--purple);
 }
 
-/* Later, replace the NS placeholder with your profile image. */
-
-.eyebrow {
-  display:inline-block;
-  background:var(--soft);
-  color:var(--dark);
-  padding:6px 13px;
-  border-radius:30px;
-  font-size:12px;
-  font-weight:800;
-  margin-bottom:18px;
+.hero .subtitle {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
-h1 {
-  font-size:clamp(38px,6vw,62px);
-  line-height:1.13;
-  letter-spacing:-2px;
-  margin-bottom:18px;
-}
+.hero p { color: var(--muted); max-width: 580px; }
 
-.highlight {
-  color:var(--primary);
-}
-
-.hero p {
-  max-width:580px;
-  color:var(--muted);
-}
-
-.buttons {
-  display:flex;
-  flex-wrap:wrap;
-  gap:12px;
-  margin-top:24px;
-}
+.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
 
 .btn {
-  display:inline-block;
-  padding:11px 18px;
-  border:1px solid var(--primary);
-  border-radius:10px;
-  font-size:13px;
-  font-weight:800;
-  cursor:pointer;
-  transition:.2s;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 19px;
+  border-radius: 12px;
+  border: 1px solid var(--purple);
+  background: var(--purple);
+  color: white;
+  font-weight: 600;
+  transition: .2s;
 }
 
-.btn-primary {
-  color:white;
-  background:var(--primary);
-}
+.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
 
-.btn-primary:hover {
-  background:var(--dark);
-  transform:translateY(-2px);
-}
+.btn-outline { background: transparent; color: var(--purple); }
 
-.btn-outline {
-  color:var(--primary);
-  background:white;
-}
+.grid { display: grid; gap: 22px; }
 
-.btn-outline:hover {
-  background:var(--soft);
-}
+.two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-.section-heading {
-  text-align:center;
-  margin-bottom:38px;
-}
-
-.section-heading h2 {
-  font-size:clamp(28px,4vw,38px);
-  letter-spacing:-1px;
-  margin-bottom:6px;
-}
-
-.section-heading p {
-  color:var(--muted);
-  font-size:14px;
-}
-
-.about-box,.education-box,.contact-box {
-  padding:28px;
-  border-radius:18px;
-  background:white;
-  border:1px solid var(--border);
-  box-shadow:var(--shadow);
-}
-
-.about-box p {
-  color:var(--muted);
-  margin-bottom:12px;
-}
-
-.education-box {
-  border-left:5px solid var(--primary);
-}
-
-.education-box h3 {
-  font-size:21px;
-}
-
-.muted {
-  color:var(--muted);
-}
-
-.status {
-  display:inline-block;
-  margin-top:12px;
-  padding:5px 11px;
-  border-radius:20px;
-  background:var(--soft);
-  color:var(--dark);
-  font-size:12px;
-  font-weight:800;
-}
-
-.grid {
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:20px;
-}
+.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 
 .card {
-  padding:24px;
-  background:white;
-  border:1px solid var(--border);
-  border-radius:18px;
-  box-shadow:var(--shadow);
-  transition:transform .2s,border-color .2s;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(70,45,110,.035);
 }
 
-.card:hover {
-  transform:translateY(-4px);
-  border-color:#c7b8ff;
+.card p { color: var(--muted); }
+
+.card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+
+#about { background: #f5f0ff; }
+
+.about-text p { margin-bottom: 14px; color: var(--muted); }
+
+.info-list { list-style: none; margin-top: 20px; }
+
+.info-list li { margin: 10px 0; }
+
+.info-list strong { color: var(--text); }
+
+.info-list span { color: var(--muted); }
+
+.education-card { border-left: 4px solid var(--purple); }
+
+.education-card .year {
+  color: var(--purple);
+  font-weight: 700;
+  font-size: .85rem;
 }
 
-.card-icon {
-  width:46px;
-  height:46px;
-  display:grid;
-  place-items:center;
-  background:var(--soft);
-  border-radius:13px;
-  font-size:23px;
-  margin-bottom:14px;
-}
+.education-card h3 { margin: 10px 0 7px; }
 
-.card h3 {
-  margin-bottom:8px;
-  font-size:18px;
-}
-
-.card p {
-  font-size:13px;
-  color:var(--muted);
-  margin-bottom:12px;
-}
-
-.tags,.skill-list {
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:13px;
-}
+.tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 
 .tag {
-  background:var(--soft);
-  color:var(--dark);
-  border-radius:6px;
-  padding:4px 8px;
-  font-size:10px;
-  font-weight:800;
+  background: var(--soft);
+  color: #6348b6;
+  border-radius: 30px;
+  padding: 7px 13px;
+  font-size: .85rem;
+  font-weight: 600;
 }
 
-.skill-group {
-  margin-bottom:24px;
+.skill-card .skill-icon { font-size: 1.8rem; margin-bottom: 12px; }
+
+.skill-card p { font-size: .92rem; }
+
+.project-card { display: flex; flex-direction: column; }
+
+.project-card .project-number {
+  color: var(--purple);
+  font-weight: 700;
+  font-size: .8rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
-.skill-group h3 {
-  margin-bottom:10px;
+.project-card p { font-size: .92rem; }
+
+.project-card .tag-list { margin: 15px 0; }
+
+.demo { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); }
+
+.demo label { display: block; font-size: .85rem; font-weight: 700; margin-bottom: 7px; }
+
+.demo select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: white;
+  color: var(--text);
 }
 
-.skill {
-  padding:9px 13px;
-  background:white;
-  border:1px solid var(--border);
-  border-radius:9px;
-  font-size:12px;
-  font-weight:700;
+.demo-result {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--soft);
+  font-size: .9rem;
 }
 
-.project-section {
-  background:#f0edff;
+.demo-result strong { color: var(--purple); }
+
+.interest-card { text-align: center; }
+
+.interest-card .interest-icon { font-size: 2rem; margin-bottom: 10px; }
+
+.certificate-card { overflow: hidden; }
+
+.certificate-preview {
+  min-height: 175px;
+  background: linear-gradient(135deg, #f0eaff, #ffeaf5);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 17px;
 }
 
-.demo-panel {
-  background:white;
-  border:1px solid var(--border);
-  border-radius:20px;
-  padding:25px;
-  box-shadow:var(--shadow);
-  margin-top:24px;
+.certificate-preview img {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  background: white;
 }
 
-.demo-heading {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:space-between;
-  gap:15px;
-  margin-bottom:20px;
+.certificate-placeholder {
+  text-align: center;
+  padding: 20px;
+  color: var(--purple);
 }
 
-.demo-heading h3 {
-  font-size:21px;
-}
+.certificate-placeholder span { font-size: 2.6rem; display: block; }
 
-.demo-heading p {
-  font-size:12px;
-  color:var(--muted);
-}
+.certificate-card p { font-size: .9rem; margin-bottom: 15px; }
 
-.demo-label {
-  display:inline-block;
-  background:#e6f7ee;
-  color:#16734f;
-  padding:5px 10px;
-  border-radius:20px;
-  font-size:10px;
-  font-weight:900;
-}
-
-.kpi-grid {
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:12px;
-  margin-bottom:22px;
-}
-
-.kpi {
-  background:#faf9ff;
-  border:1px solid var(--border);
-  border-radius:13px;
-  padding:15px;
-}
-
-.kpi span {
-  display:block;
-  color:var(--muted);
-  font-size:11px;
-  margin-bottom:6px;
-}
-
-.kpi strong {
-  font-size:clamp(17px,2.5vw,25px);
-  overflow-wrap:anywhere;
-}
-
-.chart-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:20px;
-}
-
-.chart-box {
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:18px;
-  min-width:0;
-}
-
-.chart-box h4 {
-  margin-bottom:14px;
-}
-
-.bar-row {
-  display:grid;
-  grid-template-columns:85px 1fr 65px;
-  align-items:center;
-  gap:8px;
-  margin:12px 0;
-  font-size:11px;
-}
-
-.bar-track {
-  background:#eeeaf8;
-  height:12px;
-  border-radius:20px;
-  overflow:hidden;
-}
-
-.bar-fill {
-  height:100%;
-  background:linear-gradient(90deg,#8b6cff,#b5a1ff);
-  border-radius:20px;
-  transition:width .3s;
-}
-
-.bar-value {
-  text-align:right;
-  font-weight:800;
-}
-
-.demo-controls {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  gap:10px;
-  margin:15px 0 20px;
-}
-
-.demo-controls label {
-  font-size:13px;
-  font-weight:800;
-}
-
-.demo-controls select {
-  padding:9px 12px;
-  border:1px solid var(--border);
-  border-radius:9px;
-  background:white;
-  color:var(--text);
-}
-
-.table-wrap {
-  overflow-x:auto;
-  margin-top:20px;
-}
-
-table {
-  width:100%;
-  border-collapse:collapse;
-  font-size:12px;
-  min-width:420px;
-}
-
-th,td {
-  padding:12px;
-  text-align:left;
-  border-bottom:1px solid var(--border);
-}
-
-th {
-  background:#f7f5ff;
-  color:var(--dark);
-}
-
-.note {
-  margin-top:16px;
-  color:var(--muted);
-  font-size:11px;
-}
-
-.certificate-list {
-  display:grid;
-  grid-template-columns:repeat(2,minmax(0,1fr));
-  gap:13px;
-}
-
-.certificate-link {
-  display:block;
-  padding:15px;
-  border:1px solid var(--border);
-  border-radius:10px;
-  background:white;
-  color:var(--dark);
-  font-size:13px;
-  font-weight:700;
-  overflow-wrap:anywhere;
-}
-
-.certificate-link:hover {
-  background:var(--soft);
-}
+.small-btn { padding: 9px 13px; font-size: .85rem; }
 
 .resume-box {
-  padding:38px 24px;
-  text-align:center;
-  background:linear-gradient(135deg,#eee8ff,#fff);
-  border:1px solid var(--border);
-  border-radius:20px;
+  background: linear-gradient(130deg, #eee6ff, #ffe8f4);
+  border-radius: 24px;
+  padding: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
 }
 
-.resume-box p {
-  color:var(--muted);
-  margin:10px 0 20px;
+.resume-box p { color: var(--muted); margin-top: 8px; }
+
+.contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 25px; }
+
+.contact-item { padding: 17px 0; border-bottom: 1px solid var(--border); }
+
+.contact-item:last-child { border-bottom: none; }
+
+.contact-item strong { display: block; }
+
+.contact-item a { color: var(--purple); overflow-wrap: anywhere; }
+
+.contact-form label { display: block; font-weight: 600; margin: 13px 0 6px; }
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+  color: var(--text);
 }
 
-.contact-box {
-  text-align:center;
-}
+.contact-form textarea { min-height: 120px; resize: vertical; }
 
-.contact-box p {
-  color:var(--muted);
-  margin-bottom:15px;
-}
+.contact-note { font-size: .85rem; color: var(--muted); margin-top: 12px; }
 
 footer {
-  padding:24px 0;
-  text-align:center;
-  background:white;
-  border-top:1px solid var(--border);
-  color:var(--muted);
-  font-size:12px;
+  border-top: 1px solid var(--border);
+  padding: 25px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: .9rem;
 }
 
-.footer-name {
-  color:var(--primary);
-  font-weight:800;
+footer span { color: var(--purple); }
+
+@media (max-width: 850px) {
+  .hero-grid { gap: 30px; }
+  .three-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nav-links { gap: 13px; }
 }
 
-@media(max-width:850px) {
-  nav {
-    padding:14px 0;
-    align-items:flex-start;
-  }
-
+@media (max-width: 650px) {
+  section { padding: 65px 0; }
+  .hero { padding: 55px 0 70px; }
+  .hero-grid, .two-col, .three-col, .contact-grid { grid-template-columns: 1fr; }
+  .hero-grid { text-align: center; }
+  .hero p { margin-inline: auto; }
+  .button-row { justify-content: center; }
+  .profile { width: 220px; }
+  .hero h1 { letter-spacing: -1px; }
+  .menu-toggle { display: block; }
+  .nav-inner { flex-wrap: wrap; padding: 12px 0; }
   .nav-links {
-    justify-content:flex-end;
-    gap:10px 13px;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 0;
   }
-
-  .hero-grid {
-    grid-template-columns:1fr;
-    gap:35px;
-    text-align:center;
-  }
-
-  .profile-frame {
-    max-width:225px;
-  }
-
-  .hero p {
-    margin:auto;
-  }
-
-  .hero .buttons {
-    justify-content:center;
-  }
-
-  .grid {
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-
-  .kpi-grid {
-    grid-template-columns:repeat(2,minmax(0,1fr));
-  }
-}
-
-@media(max-width:560px) {
-  nav {
-    flex-direction:column;
-    align-items:center;
-  }
-
-  .nav-links {
-    justify-content:center;
-  }
-
-  section {
-    padding:55px 0;
-  }
-
-  .grid,.chart-grid,.certificate-list {
-    grid-template-columns:1fr;
-  }
-
-  .demo-panel {
-    padding:16px;
-  }
-
-  .bar-row {
-    grid-template-columns:70px 1fr 58px;
-    gap:6px;
-  }
-
-  .about-box,.education-box,.contact-box {
-    padding:21px;
-  }
+  .nav-links.open { display: flex; }
+  .resume-box { flex-direction: column; align-items: flex-start; padding: 25px; }
+  .card { padding: 21px; }
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <nav class="container">
-    <a class="logo" href="#home">NS.</a>
-    <ul class="nav-links">
+<nav>
+  <div class="container nav-inner">
+    <a href="#home" class="logo">NS.</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰ Menu</button>
+
+    <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#interests">Interests</a></li>
       <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
-</header>
+  </div>
+</nav>
 
-<main>
-
-<!-- HERO -->
-<section class="hero" id="home">
+<!-- HOME -->
+<header class="hero" id="home">
   <div class="container hero-grid">
 
-    <div class="profile-frame">
-      <!-- Add your photo later by replacing this placeholder with an img element. -->
-      <div class="profile-placeholder">
-        <strong>NS.</strong>
-        <span>Profile photo coming soon</span>
+    <div class="profile-wrap">
+      <div class="profile" id="profileBox">
+        <span class="profile-fallback">NS.</span>
       </div>
     </div>
 
     <div>
-      <span class="eyebrow">AI & DATA SCIENCE STUDENT</span>
-      <h1>Hi, I'm<br><span class="highlight">N. Shyamsaran</span></h1>
-
+      <span class="eyebrow">Welcome to my portfolio</span>
+      <h1>Hi, I'm <span>N. Shyamsaran</span></h1>
+      <div class="subtitle">AI & Data Science Student | Aspiring Data Analyst</div>
       <p>
-        An aspiring Data Analyst interested in exploring data,
-        discovering patterns, creating visualizations, and building
-        practical projects while continuously improving my technical skills.
+        I'm a final-year Artificial Intelligence and Data Science student
+        interested in data analytics, problem-solving and turning data
+        into meaningful insights. I'm building my skills step by step
+        and looking forward to learning through practical projects.
       </p>
 
-      <div class="buttons">
-        <a class="btn btn-primary" href="#projects">Explore Projects ↗</a>
+      <div class="button-row">
+        <a class="btn" href="#projects">Explore My Projects ↗</a>
         <a class="btn btn-outline" href="#contact">Contact Me</a>
       </div>
     </div>
 
   </div>
-</section>
+</header>
+
+<main>
 
 <!-- ABOUT -->
 <section id="about">
   <div class="container">
     <div class="section-heading">
+      <span class="eyebrow">A little about me</span>
       <h2>About Me</h2>
-      <p>My journey into technology and data</p>
     </div>
 
-    <div class="about-box">
-      <p>
-        I'm N. Shyamsaran, a final-year B.Tech Artificial Intelligence
-        and Data Science student at Mahendra College of Engineering.
-      </p>
-      <p>
-        I'm working towards a career in Data Analytics and developing
-        my knowledge of Python, SQL, data visualization, and spreadsheets.
-      </p>
-      <p>
-        My goal is to strengthen my fundamentals, build useful projects,
-        and learn how data can help people make better decisions.
-      </p>
+    <div class="grid two-col">
+      <div class="card about-text">
+        <h3>My Journey</h3>
+        <p>
+          I'm N. Shyamsaran, currently pursuing my B.Tech in Artificial
+          Intelligence and Data Science at Mahendra College of Engineering.
+        </p>
+        <p>
+          My career goal is to become a Data Analyst. I'm interested in
+          understanding data, finding patterns and presenting information
+          in a clear and useful way.
+        </p>
+        <p>
+          I'm working on strengthening my foundations in programming,
+          spreadsheets, SQL and data visualization through continuous
+          learning and hands-on practice.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Quick Information</h3>
+        <ul class="info-list">
+          <li><strong>Name:</strong> <span>N. Shyamsaran</span></li>
+          <li><strong>Education:</strong> <span>B.Tech AI & Data Science</span></li>
+          <li><strong>College:</strong> <span>Mahendra College of Engineering</span></li>
+          <li><strong>Current Year:</strong> <span>Final Year</span></li>
+          <li><strong>Career Goal:</strong> <span>Data Analyst</span></li>
+          <li><strong>Learning Focus:</strong> <span>Python, SQL & Data Analysis</span></li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -707,287 +482,234 @@ footer {
 <section id="education">
   <div class="container">
     <div class="section-heading">
+      <span class="eyebrow">Academic background</span>
       <h2>Education</h2>
-      <p>My academic background</p>
+      <p>My academic journey and current qualification.</p>
     </div>
 
-    <div class="education-box">
-      <h3>B.Tech — Artificial Intelligence and Data Science</h3>
-      <p class="muted">Mahendra College of Engineering</p>
-      <p class="muted">Currently pursuing 4th year</p>
-      <span class="status">Final-Year Student</span>
+    <div class="card education-card">
+      <span class="year">Currently Pursuing · Final Year</span>
+      <h3>Bachelor of Technology (B.Tech)</h3>
+      <p><strong>Artificial Intelligence and Data Science</strong></p>
+      <p>Mahendra College of Engineering</p>
+      <div class="tag-list">
+        <span class="tag">Artificial Intelligence</span>
+        <span class="tag">Data Science</span>
+        <span class="tag">Data Analytics</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills">
+<section id="skills" style="background:#f5f0ff">
   <div class="container">
     <div class="section-heading">
+      <span class="eyebrow">What I'm learning</span>
       <h2>Skills & Technologies</h2>
-      <p>Tools I'm learning and practising</p>
+      <p>My learning areas related to data analysis.</p>
     </div>
 
-    <div class="skill-group">
-      <h3>Programming & Data</h3>
-      <div class="skill-list">
-        <span class="skill">Python — Learning</span>
-        <span class="skill">C++</span>
-        <span class="skill">Pandas — Learning</span>
-        <span class="skill">Matplotlib — Learning</span>
-        <span class="skill">SQL — Learning</span>
-        <span class="skill">Excel — Learning</span>
+    <div class="grid three-col">
+      <div class="card skill-card">
+        <div class="skill-icon">🐍</div>
+        <h3>Python</h3>
+        <p>Learning programming fundamentals and data handling.</p>
       </div>
-    </div>
 
-    <div class="skill-group">
-      <h3>Tools & Other Skills</h3>
-      <div class="skill-list">
-        <span class="skill">Problem Solving</span>
-        <span class="skill">HTML</span>
-        <span class="skill">CSS</span>
-        <span class="skill">GitHub</span>
-        <span class="skill">VS Code</span>
+      <div class="card skill-card">
+        <div class="skill-icon">🗄️</div>
+        <h3>SQL</h3>
+        <p>Building knowledge of queries, filtering and data retrieval.</p>
+      </div>
+
+      <div class="card skill-card">
+        <div class="skill-icon">📊</div>
+        <h3>Excel</h3>
+        <p>Learning spreadsheet analysis, formulas and data organization.</p>
+      </div>
+
+      <div class="card skill-card">
+        <div class="skill-icon">📈</div>
+        <h3>Power BI</h3>
+        <p>Exploring dashboards and visual presentation of information.</p>
+      </div>
+
+      <div class="card skill-card">
+        <div class="skill-icon">🧹</div>
+        <h3>Data Cleaning</h3>
+        <p>Understanding missing values, duplicates and consistent data.</p>
+      </div>
+
+      <div class="card skill-card">
+        <div class="skill-icon">🧠</div>
+        <h3>Problem Solving</h3>
+        <p>Developing logical thinking and analytical skills through practice.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- PROJECT CARDS -->
+<!-- PROJECTS -->
 <section id="projects">
   <div class="container">
     <div class="section-heading">
+      <span class="eyebrow">Practice & exploration</span>
       <h2>My Projects</h2>
-      <p>Three data projects with interactive demonstrations</p>
+      <p>Interactive sample dashboards for learning data analysis. These use demonstration data, not real client data.</p>
     </div>
 
-    <div class="grid">
+    <div class="grid three-col">
 
-      <article class="card">
-        <div class="card-icon">📊</div>
-        <h3>01. Sales Data Analysis</h3>
-        <p>
-          Explore sample product sales, revenue, and quantity sold.
-          Use the interactive dashboard below to filter sales data.
-        </p>
-        <div class="tags">
+      <article class="card project-card">
+        <span class="project-number">PROJECT 01</span>
+        <h3>Sales Data Analysis</h3>
+        <p>Explore a sample sales dataset and compare categories, sales totals and order counts.</p>
+        <div class="tag-list">
           <span class="tag">Data Analysis</span>
-          <span class="tag">Python Concept</span>
-          <span class="tag">Visualization</span>
+          <span class="tag">Dashboard</span>
         </div>
-        <a class="btn btn-outline" href="#dashboard">Explore Demo ↓</a>
+        <div class="demo">
+          <label for="salesFilter">Select product category</label>
+          <select id="salesFilter">
+            <option value="all">All categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="accessories">Accessories</option>
+            <option value="home">Home</option>
+          </select>
+          <div class="demo-result" id="salesResult" aria-live="polite"></div>
+        </div>
       </article>
 
-      <article class="card">
-        <div class="card-icon">👥</div>
-        <h3>02. Customer Insights</h3>
-        <p>
-          Examine sample customers, spending, order frequency,
-          and customer segments to understand purchasing behaviour.
-        </p>
-        <div class="tags">
-          <span class="tag">Customer Analytics</span>
-          <span class="tag">Segmentation</span>
+      <article class="card project-card">
+        <span class="project-number">PROJECT 02</span>
+        <h3>Customer Insights</h3>
+        <p>Explore sample customer segments and see how the selected group changes the summary.</p>
+        <div class="tag-list">
+          <span class="tag">Customer Data</span>
           <span class="tag">Insights</span>
         </div>
-        <a class="btn btn-outline" href="#customers">Explore Demo ↓</a>
+        <div class="demo">
+          <label for="customerFilter">Select customer segment</label>
+          <select id="customerFilter">
+            <option value="all">All customers</option>
+            <option value="regular">Regular</option>
+            <option value="premium">Premium</option>
+            <option value="occasional">Occasional</option>
+          </select>
+          <div class="demo-result" id="customerResult" aria-live="polite"></div>
+        </div>
       </article>
 
-      <article class="card">
-        <div class="card-icon">📈</div>
-        <h3>03. Interactive Dashboard</h3>
-        <p>
-          Change the category filter and see sales KPIs, product
-          comparisons, and chart values update dynamically.
-        </p>
-        <div class="tags">
-          <span class="tag">Interactive UI</span>
-          <span class="tag">KPI Cards</span>
-          <span class="tag">Charts</span>
+      <article class="card project-card">
+        <span class="project-number">PROJECT 03</span>
+        <h3>Interactive Data Dashboard</h3>
+        <p>Practice interpreting a sample dataset by filtering records and viewing updated totals.</p>
+        <div class="tag-list">
+          <span class="tag">Visualization</span>
+          <span class="tag">Interactive</span>
         </div>
-        <a class="btn btn-outline" href="#dashboard">Open Dashboard ↓</a>
+        <div class="demo">
+          <label for="regionFilter">Select region</label>
+          <select id="regionFilter">
+            <option value="all">All regions</option>
+            <option value="chennai">Chennai</option>
+            <option value="coimbatore">Coimbatore</option>
+            <option value="madurai">Madurai</option>
+          </select>
+          <div class="demo-result" id="regionResult" aria-live="polite"></div>
+        </div>
       </article>
 
-    </div>
-  </div>
-</section>
-
-<!-- SALES ANALYSIS + DASHBOARD -->
-<section class="project-section" id="dashboard">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Sales Analytics Dashboard</h2>
-      <p>Explore the sample sales dataset interactively</p>
-    </div>
-
-    <div class="demo-panel">
-      <div class="demo-heading">
-        <div>
-          <h3>Sales Performance</h3>
-          <p>Product revenue and units sold</p>
-        </div>
-        <span class="demo-label">INTERACTIVE DEMO</span>
-      </div>
-
-      <div class="demo-controls">
-        <label for="categoryFilter">Filter category:</label>
-        <select id="categoryFilter">
-          <option value="All">All categories</option>
-          <option value="Electronics">Electronics</option>
-          <option value="Accessories">Accessories</option>
-          <option value="Home">Home</option>
-        </select>
-      </div>
-
-      <div class="kpi-grid">
-        <div class="kpi">
-          <span>Total Revenue</span>
-          <strong id="totalRevenue">₹0</strong>
-        </div>
-        <div class="kpi">
-          <span>Units Sold</span>
-          <strong id="totalUnits">0</strong>
-        </div>
-        <div class="kpi">
-          <span>Products</span>
-          <strong id="productCount">0</strong>
-        </div>
-        <div class="kpi">
-          <span>Top Product</span>
-          <strong id="topProduct">—</strong>
-        </div>
-      </div>
-
-      <div class="chart-grid">
-        <div class="chart-box">
-          <h4>Revenue by Product</h4>
-          <div id="revenueChart"></div>
-        </div>
-        <div class="chart-box">
-          <h4>Units Sold by Product</h4>
-          <div id="unitsChart"></div>
-        </div>
-      </div>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Product</th>
-              <th>Category</th>
-              <th>Units Sold</th>
-              <th>Revenue</th>
-            </tr>
-          </thead>
-          <tbody id="salesTable"></tbody>
-        </table>
-      </div>
-
-      <p class="note">
-        Portfolio demonstration using fictional sample data. Values are
-        illustrative and do not represent actual company sales.
-      </p>
-    </div>
-  </div>
-</section>
-
-<!-- CUSTOMER INSIGHTS -->
-<section id="customers">
-  <div class="container">
-    <div class="section-heading">
-      <h2>Customer Insights</h2>
-      <p>Explore sample spending patterns and customer segments</p>
-    </div>
-
-    <div class="demo-panel">
-      <div class="demo-heading">
-        <div>
-          <h3>Customer Behaviour Explorer</h3>
-          <p>Sample customer orders and spending</p>
-        </div>
-        <span class="demo-label">INTERACTIVE DEMO</span>
-      </div>
-
-      <div class="demo-controls">
-        <label for="segmentFilter">Customer segment:</label>
-        <select id="segmentFilter">
-          <option value="All">All customers</option>
-          <option value="Regular">Regular</option>
-          <option value="Premium">Premium</option>
-          <option value="Occasional">Occasional</option>
-        </select>
-      </div>
-
-      <div class="kpi-grid">
-        <div class="kpi">
-          <span>Customers</span>
-          <strong id="customerCount">0</strong>
-        </div>
-        <div class="kpi">
-          <span>Total Spending</span>
-          <strong id="customerSpend">₹0</strong>
-        </div>
-        <div class="kpi">
-          <span>Average Spend</span>
-          <strong id="averageSpend">₹0</strong>
-        </div>
-        <div class="kpi">
-          <span>Orders</span>
-          <strong id="orderCount">0</strong>
-        </div>
-      </div>
-
-      <div class="chart-grid">
-        <div class="chart-box">
-          <h4>Spending by Customer</h4>
-          <div id="customerChart"></div>
-        </div>
-        <div class="chart-box">
-          <h4>Segment Breakdown</h4>
-          <div id="segmentChart"></div>
-        </div>
-      </div>
-
-      <div class="table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Customer</th>
-              <th>Segment</th>
-              <th>Orders</th>
-              <th>Total Spend</th>
-            </tr>
-          </thead>
-          <tbody id="customerTable"></tbody>
-        </table>
-      </div>
-
-      <p class="note">
-        These are fictional sample customers. This demo illustrates
-        segmentation and descriptive analysis, not real customer research.
-      </p>
     </div>
   </div>
 </section>
 
 <!-- INTERESTS -->
-<section id="interests">
+<section id="interests" style="background:#f5f0ff">
   <div class="container">
     <div class="section-heading">
-      <h2>Areas of Interest</h2>
-      <p>Topics I want to explore further</p>
+      <span class="eyebrow">Beyond the classroom</span>
+      <h2>Interests</h2>
+      <p>Areas I'm interested in exploring and developing.</p>
     </div>
 
-    <div class="grid">
-      <article class="card">
-        <div class="card-icon">🔍</div>
+    <div class="grid three-col">
+      <div class="card interest-card">
+        <div class="interest-icon">📊</div>
         <h3>Data Analytics</h3>
-        <p>Finding patterns and insights in data.</p>
-      </article>
-      <article class="card">
-        <div class="card-icon">🤖</div>
+        <p>Understanding trends and finding insights from data.</p>
+      </div>
+
+      <div class="card interest-card">
+        <div class="interest-icon">🤖</div>
         <h3>Artificial Intelligence</h3>
-        <p>Exploring how intelligent systems solve problems.</p>
+        <p>Exploring AI concepts and their real-world applications.</p>
+      </div>
+
+      <div class="card interest-card">
+        <div class="interest-icon">💡</div>
+        <h3>Continuous Learning</h3>
+        <p>Practising new skills and building useful projects.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="certificates">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Learning milestones</span>
+      <h2>Certificates</h2>
+      <p>Certificates from my learning journey.</p>
+    </div>
+
+    <div class="grid two-col">
+
+      <!-- Certificate image 1 -->
+      <article class="card certificate-card">
+        <div class="certificate-preview">
+          <img
+            src="WhatsApp%20Image%202026-10-28%20at%207.48.38%20PM.jpeg"
+            alt="Certificate image 1"
+            loading="lazy"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+          <div class="certificate-placeholder" style="display:none">
+            <span>🏆</span>
+            <strong>Certificate image 1 not found</strong>
+            <p>Check the filename in your repository.</p>
+          </div>
+        </div>
+        <h3>Certificate 01</h3>
+        <p>Certificate image from my learning journey.</p>
       </article>
-      <article class="card">
-        <div class="card-icon">📉</div>
+
+      <!-- Certificate image 2 -->
+      <article class="card certificate-card">
+        <div class="certificate-preview">
+          <img
+            src="WhatsApp%20Image%202026-10-28%20at%207.48.39%20PM.jpeg"
+            alt="Certificate image 2"
+            loading="lazy"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+          <div class="certificate-placeholder" style="display:none">
+            <span>🏆</span>
+            <strong>Certificate image 2 not found</strong>
+            <p>Check the filename in your repository.</p>
+          </div>
+        </div>
+        <h3>Certificate 02</h3>
+        <p>Certificate image from my learning journey.</p>
+      </article>
+
+      <!-- C++ PDF -->
+      <article class="card certificate-card">
+        <div class="certificate-preview">
+          <div class="certificate-placeholder">
+            <span>📄</span>
+            <strong>C++ Certificate</strong>
+            <p>PDF document</p>
+          </div>
+        </div>
+        <h3>C++ Certifica
