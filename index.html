@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>N. Shyamsaran | AI & Data Science Portfolio</title>
-<meta name="description" content="N. Shyamsaran's portfolio showcasing education, skills, data analysis projects and certifications.">
+<meta name="description" content="N. Shyamsaran — AI & Data Science student and aspiring Data Analyst.">
+<title>N. Shyamsaran | Portfolio</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,19 +12,25 @@
 <style>
 :root {
   --bg: #fbf9ff;
-  --surface: #ffffff;
-  --text: #25213a;
-  --muted: #77718b;
+  --white: #ffffff;
+  --text: #29233c;
+  --muted: #77718a;
   --purple: #8064d9;
   --pink: #ed9dc8;
-  --border: #eee8f7;
-  --soft: #f2edff;
-  --shadow: 0 12px 35px rgba(70, 45, 110, .08);
+  --soft: #f1ebff;
+  --border: #eae3f5;
 }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
 
 body {
   font-family: 'DM Sans', sans-serif;
@@ -34,17 +39,36 @@ body {
   line-height: 1.7;
 }
 
-a { color: inherit; text-decoration: none; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
 
-button, input, textarea, select { font: inherit; }
+button, input, textarea, select {
+  font: inherit;
+}
 
-button, select { cursor: pointer; }
+button, select {
+  cursor: pointer;
+}
 
-.container { width: min(1100px, 90%); margin: auto; }
+.container {
+  width: min(1100px, 90%);
+  margin: auto;
+}
 
-section { padding: 85px 0; }
+section {
+  padding: 78px 0;
+}
 
-.section-heading { margin-bottom: 35px; }
+h1, h2, h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  line-height: 1.3;
+}
+
+.heading {
+  margin-bottom: 32px;
+}
 
 .eyebrow {
   color: var(--purple);
@@ -54,93 +78,108 @@ section { padding: 85px 0; }
   text-transform: uppercase;
 }
 
-h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.25; }
-
-.section-heading h2 {
-  font-size: clamp(2rem, 4vw, 2.8rem);
+.heading h2 {
+  font-size: clamp(2rem, 4vw, 2.7rem);
   margin-top: 8px;
 }
 
-.section-heading p { color: var(--muted); margin-top: 10px; }
+.heading p {
+  color: var(--muted);
+  margin-top: 8px;
+}
 
 nav {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(251,249,255,.94);
-  backdrop-filter: blur(15px);
+  background: rgba(251,249,255,.96);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 
 .nav-inner {
-  min-height: 76px;
+  min-height: 74px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   gap: 20px;
 }
 
 .logo {
   font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--purple);
 }
 
 .nav-links {
   display: flex;
+  gap: 18px;
   list-style: none;
   align-items: center;
-  gap: 23px;
 }
 
-.nav-links a { font-size: .9rem; color: var(--muted); }
+.nav-links a {
+  color: var(--muted);
+  font-size: .87rem;
+}
 
-.nav-links a:hover { color: var(--purple); }
+.nav-links a:hover {
+  color: var(--purple);
+}
 
-.menu-toggle {
+.menu-button {
   display: none;
+  background: var(--white);
   border: 1px solid var(--border);
-  background: white;
   padding: 8px 12px;
   border-radius: 10px;
 }
 
-.hero { padding: 85px 0 95px; }
+.hero {
+  padding: 85px 0;
+}
 
 .hero-grid {
   display: grid;
   grid-template-columns: .8fr 1.2fr;
-  gap: 60px;
+  gap: 55px;
   align-items: center;
 }
 
-.profile-wrap { display: flex; justify-content: center; }
-
-.profile {
-  width: min(300px, 100%);
-  aspect-ratio: 4 / 5;
-  border-radius: 150px 150px 35px 35px;
-  background: linear-gradient(145deg, #e9dcff, #ffe3f2);
+.profile-wrap {
   display: flex;
   justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  border: 8px solid white;
-  box-shadow: var(--shadow);
 }
 
-.profile img { width: 100%; height: 100%; object-fit: cover; }
+.profile {
+  width: min(290px, 100%);
+  aspect-ratio: 4 / 5;
+  border-radius: 150px 150px 30px 30px;
+  background: linear-gradient(145deg, #e7dcff, #ffe3f1);
+  border: 8px solid white;
+  box-shadow: 0 15px 40px #5a3d8214;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
-.profile-fallback {
+.profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.initials {
+  color: var(--purple);
   font-family: 'Space Grotesk', sans-serif;
   font-size: 5rem;
-  color: var(--purple);
   font-weight: 700;
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  font-size: clamp(2.6rem, 5vw, 4.2rem);
   letter-spacing: -2px;
   margin: 12px 0;
 }
@@ -149,144 +188,202 @@ nav {
   color: var(--purple);
 }
 
-.hero .subtitle {
-  font-size: 1.15rem;
-  font-weight: 600;
+.hero-role {
+  font-size: 1.1rem;
+  font-weight: 700;
   margin-bottom: 15px;
 }
 
-.hero p { color: var(--muted); max-width: 580px; }
+.hero p {
+  color: var(--muted);
+}
 
-.button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 23px;
+}
 
 .btn {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
-  padding: 12px 19px;
-  border-radius: 12px;
+  padding: 11px 17px;
   border: 1px solid var(--purple);
+  border-radius: 11px;
   background: var(--purple);
   color: white;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: .9rem;
   transition: .2s;
 }
 
-.btn:hover { transform: translateY(-2px); box-shadow: var(--shadow); }
+.btn:hover {
+  transform: translateY(-2px);
+}
 
-.btn-outline { background: transparent; color: var(--purple); }
+.btn-outline {
+  color: var(--purple);
+  background: transparent;
+}
 
-.grid { display: grid; gap: 22px; }
+.grid {
+  display: grid;
+  gap: 20px;
+}
 
-.two-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
 
-.three-col { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
 
 .card {
-  background: var(--surface);
+  background: var(--white);
   border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 25px;
-  box-shadow: 0 5px 20px rgba(70,45,110,.035);
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 5px 20px #49306b08;
+  min-width: 0;
 }
 
-.card p { color: var(--muted); }
+.card h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
 
-.card h3 { font-size: 1.15rem; margin-bottom: 10px; }
+.card p {
+  color: var(--muted);
+}
 
-#about { background: #f5f0ff; }
+.soft-section {
+  background: #f5f0ff;
+}
 
-.about-text p { margin-bottom: 14px; color: var(--muted); }
+.about-copy p {
+  margin-bottom: 14px;
+}
 
-.info-list { list-style: none; margin-top: 20px; }
+.info-list {
+  list-style: none;
+}
 
-.info-list li { margin: 10px 0; }
+.info-list li {
+  padding: 8px 0;
+  overflow-wrap: anywhere;
+}
 
-.info-list strong { color: var(--text); }
+.info-list strong {
+  display: inline-block;
+  margin-right: 5px;
+}
 
-.info-list span { color: var(--muted); }
+.info-list span {
+  color: var(--muted);
+}
 
-.education-card { border-left: 4px solid var(--purple); }
+.education-card {
+  border-left: 4px solid var(--purple);
+}
 
-.education-card .year {
+.year {
   color: var(--purple);
-  font-weight: 700;
   font-size: .85rem;
+  font-weight: 700;
 }
 
-.education-card h3 { margin: 10px 0 7px; }
+.education-card h3 {
+  margin: 12px 0 8px;
+}
 
-.tag-list { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
 
 .tag {
   background: var(--soft);
-  color: #6348b6;
+  color: #654ab7;
+  padding: 6px 12px;
   border-radius: 30px;
-  padding: 7px 13px;
-  font-size: .85rem;
-  font-weight: 600;
+  font-size: .8rem;
+  font-weight: 700;
 }
 
-.skill-card .skill-icon { font-size: 1.8rem; margin-bottom: 12px; }
+.skill-icon, .interest-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
 
-.skill-card p { font-size: .92rem; }
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
 
-.project-card { display: flex; flex-direction: column; }
-
-.project-card .project-number {
+.project-number {
   color: var(--purple);
   font-weight: 700;
   font-size: .8rem;
   letter-spacing: 1px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 
-.project-card p { font-size: .92rem; }
+.demo {
+  border-top: 1px solid var(--border);
+  margin-top: 16px;
+  padding-top: 15px;
+}
 
-.project-card .tag-list { margin: 15px 0; }
-
-.demo { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--border); }
-
-.demo label { display: block; font-size: .85rem; font-weight: 700; margin-bottom: 7px; }
+.demo label {
+  display: block;
+  font-size: .85rem;
+  font-weight: 700;
+  margin-bottom: 7px;
+}
 
 .demo select {
   width: 100%;
   padding: 10px;
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 9px;
   background: white;
   color: var(--text);
 }
 
-.demo-result {
-  margin-top: 12px;
-  padding: 12px;
-  border-radius: 10px;
+.result {
   background: var(--soft);
+  border-radius: 10px;
+  padding: 13px;
+  margin-top: 12px;
   font-size: .9rem;
 }
 
-.demo-result strong { color: var(--purple); }
+.result strong {
+  color: var(--purple);
+}
 
-.interest-card { text-align: center; }
-
-.interest-card .interest-icon { font-size: 2rem; margin-bottom: 10px; }
-
-.certificate-card { overflow: hidden; }
+.interest-card {
+  text-align: center;
+}
 
 .certificate-preview {
   min-height: 175px;
-  background: linear-gradient(135deg, #f0eaff, #ffeaf5);
-  border-radius: 14px;
+  background: linear-gradient(135deg, #eee7ff, #ffeaf5);
+  border-radius: 12px;
+  margin-bottom: 17px;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  margin-bottom: 17px;
 }
 
 .certificate-preview img {
+  display: block;
   width: 100%;
   height: 210px;
   object-fit: contain;
@@ -294,53 +391,79 @@ nav {
 }
 
 .certificate-placeholder {
-  text-align: center;
   padding: 20px;
+  text-align: center;
   color: var(--purple);
 }
 
-.certificate-placeholder span { font-size: 2.6rem; display: block; }
+.certificate-placeholder span {
+  display: block;
+  font-size: 2.5rem;
+}
 
-.certificate-card p { font-size: .9rem; margin-bottom: 15px; }
-
-.small-btn { padding: 9px 13px; font-size: .85rem; }
+.certificate-card .btn {
+  margin-top: 14px;
+}
 
 .resume-box {
   background: linear-gradient(130deg, #eee6ff, #ffe8f4);
-  border-radius: 24px;
-  padding: 35px;
+  padding: 32px;
+  border-radius: 22px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 25px;
+  justify-content: space-between;
+  gap: 22px;
 }
 
-.resume-box p { color: var(--muted); margin-top: 8px; }
+.resume-box p {
+  color: var(--muted);
+  margin-top: 8px;
+}
 
-.contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 25px; }
+.contact-item {
+  padding: 14px 0;
+  border-bottom: 1px solid var(--border);
+}
 
-.contact-item { padding: 17px 0; border-bottom: 1px solid var(--border); }
+.contact-item:last-child {
+  border-bottom: none;
+}
 
-.contact-item:last-child { border-bottom: none; }
+.contact-item strong {
+  display: block;
+}
 
-.contact-item strong { display: block; }
+.contact-item a {
+  color: var(--purple);
+  overflow-wrap: anywhere;
+}
 
-.contact-item a { color: var(--purple); overflow-wrap: anywhere; }
+.contact-form label {
+  display: block;
+  margin: 13px 0 6px;
+  font-weight: 700;
+}
 
-.contact-form label { display: block; font-weight: 600; margin: 13px 0 6px; }
-
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
   width: 100%;
-  padding: 12px;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  background: #fff;
+  border-radius: 9px;
+  padding: 12px;
+  background: white;
   color: var(--text);
 }
 
-.contact-form textarea { min-height: 120px; resize: vertical; }
+.contact-form textarea {
+  min-height: 115px;
+  resize: vertical;
+}
 
-.contact-note { font-size: .85rem; color: var(--muted); margin-top: 12px; }
+.note {
+  font-size: .82rem;
+  color: var(--muted);
+  margin-top: 10px;
+}
 
 footer {
   border-top: 1px solid var(--border);
@@ -350,46 +473,97 @@ footer {
   font-size: .9rem;
 }
 
-footer span { color: var(--purple); }
+footer span {
+  color: var(--purple);
+}
 
 @media (max-width: 850px) {
-  .hero-grid { gap: 30px; }
-  .three-col { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .nav-links { gap: 13px; }
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: .8rem;
+  }
+
+  .three {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 650px) {
-  section { padding: 65px 0; }
-  .hero { padding: 55px 0 70px; }
-  .hero-grid, .two-col, .three-col, .contact-grid { grid-template-columns: 1fr; }
-  .hero-grid { text-align: center; }
-  .hero p { margin-inline: auto; }
-  .button-row { justify-content: center; }
-  .profile { width: 220px; }
-  .hero h1 { letter-spacing: -1px; }
-  .menu-toggle { display: block; }
-  .nav-inner { flex-wrap: wrap; padding: 12px 0; }
+  section {
+    padding: 60px 0;
+  }
+
+  .hero {
+    padding: 55px 0;
+  }
+
+  .hero-grid, .two, .three {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-grid {
+    text-align: center;
+    gap: 28px;
+  }
+
+  .hero p {
+    margin: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .profile {
+    width: 220px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .nav-inner {
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+
   .nav-links {
     display: none;
     width: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 8px 0;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: .95rem;
+  }
+
+  .resume-box {
     flex-direction: column;
     align-items: flex-start;
-    padding: 10px 0;
+    padding: 24px;
   }
-  .nav-links.open { display: flex; }
-  .resume-box { flex-direction: column; align-items: flex-start; padding: 25px; }
-  .card { padding: 21px; }
 }
 </style>
 </head>
 
 <body>
 
+<!-- NAVIGATION -->
 <nav>
   <div class="container nav-inner">
-    <a href="#home" class="logo">NS.</a>
+    <a class="logo" href="#home">NS.</a>
 
-    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰ Menu</button>
+    <button class="menu-button" id="menuButton"
+      aria-expanded="false" aria-controls="navLinks">☰ Menu</button>
 
     <ul class="nav-links" id="navLinks">
       <li><a href="#home">Home</a></li>
@@ -399,6 +573,7 @@ footer span { color: var(--purple); }
       <li><a href="#projects">Projects</a></li>
       <li><a href="#interests">Interests</a></li>
       <li><a href="#certificates">Certificates</a></li>
+      <li><a href="#resume">Resume</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </div>
@@ -410,24 +585,30 @@ footer span { color: var(--purple); }
 
     <div class="profile-wrap">
       <div class="profile" id="profileBox">
-        <span class="profile-fallback">NS.</span>
+        <span class="initials">NS.</span>
       </div>
     </div>
 
     <div>
       <span class="eyebrow">Welcome to my portfolio</span>
       <h1>Hi, I'm <span>N. Shyamsaran</span></h1>
-      <div class="subtitle">AI & Data Science Student | Aspiring Data Analyst</div>
+      <div class="hero-role">AI & Data Science Student | Aspiring Data Analyst</div>
+
       <p>
         I'm a final-year Artificial Intelligence and Data Science student
-        interested in data analytics, problem-solving and turning data
-        into meaningful insights. I'm building my skills step by step
-        and looking forward to learning through practical projects.
+        at Mahendra College of Engineering. I'm interested in data analysis,
+        problem-solving and learning how to turn data into meaningful insights.
+        I'm building my technical foundation through continuous learning
+        and practical projects.
       </p>
 
-      <div class="button-row">
-        <a class="btn" href="#projects">Explore My Projects ↗</a>
-        <a class="btn btn-outline" href="#contact">Contact Me</a>
+      <div class="buttons">
+        <a class="btn" href="#projects">Explore Projects ↗</a>
+        <a class="btn btn-outline" href="resume.pdf.pdf" target="_blank" rel="noopener">
+          View Resume
+        </a>
+        <a class="btn btn-outline" href="https://github.com/shyamsaran07"
+           target="_blank" rel="noopener">My GitHub ↗</a>
       </div>
     </div>
 
@@ -437,43 +618,46 @@ footer span { color: var(--purple); }
 <main>
 
 <!-- ABOUT -->
-<section id="about">
+<section class="soft-section" id="about">
   <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">A little about me</span>
+    <div class="heading">
+      <span class="eyebrow">Get to know me</span>
       <h2>About Me</h2>
     </div>
 
-    <div class="grid two-col">
-      <div class="card about-text">
+    <div class="grid two">
+      <article class="card about-copy">
         <h3>My Journey</h3>
         <p>
-          I'm N. Shyamsaran, currently pursuing my B.Tech in Artificial
-          Intelligence and Data Science at Mahendra College of Engineering.
+          I'm N. Shyamsaran, pursuing a B.Tech in Artificial Intelligence
+          and Data Science at Mahendra College of Engineering.
         </p>
         <p>
           My career goal is to become a Data Analyst. I'm interested in
-          understanding data, finding patterns and presenting information
-          in a clear and useful way.
+          working with data, identifying patterns and communicating findings
+          clearly.
         </p>
         <p>
-          I'm working on strengthening my foundations in programming,
-          spreadsheets, SQL and data visualization through continuous
-          learning and hands-on practice.
+          I'm currently developing my foundations in programming,
+          spreadsheets, SQL and data visualization. I believe in learning
+          through practice and improving one step at a time.
         </p>
-      </div>
+      </article>
 
-      <div class="card">
+      <article class="card">
         <h3>Quick Information</h3>
         <ul class="info-list">
-          <li><strong>Name:</strong> <span>N. Shyamsaran</span></li>
-          <li><strong>Education:</strong> <span>B.Tech AI & Data Science</span></li>
-          <li><strong>College:</strong> <span>Mahendra College of Engineering</span></li>
-          <li><strong>Current Year:</strong> <span>Final Year</span></li>
-          <li><strong>Career Goal:</strong> <span>Data Analyst</span></li>
-          <li><strong>Learning Focus:</strong> <span>Python, SQL & Data Analysis</span></li>
+          <li><strong>Name:</strong><span>N. Shyamsaran</span></li>
+          <li><strong>College:</strong><span>Mahendra College of Engineering</span></li>
+          <li><strong>Degree:</strong><span>B.Tech AI & Data Science</span></li>
+          <li><strong>Study year:</strong><span>Final Year</span></li>
+          <li><strong>Career goal:</strong><span>Data Analyst</span></li>
+          <li><strong>GitHub:</strong>
+            <a href="https://github.com/shyamsaran07"
+               target="_blank" rel="noopener">shyamsaran07 ↗</a>
+          </li>
         </ul>
-      </div>
+      </article>
     </div>
   </div>
 </section>
@@ -481,71 +665,72 @@ footer span { color: var(--purple); }
 <!-- EDUCATION -->
 <section id="education">
   <div class="container">
-    <div class="section-heading">
+    <div class="heading">
       <span class="eyebrow">Academic background</span>
       <h2>Education</h2>
-      <p>My academic journey and current qualification.</p>
+      <p>My current qualification.</p>
     </div>
 
-    <div class="card education-card">
+    <article class="card education-card">
       <span class="year">Currently Pursuing · Final Year</span>
-      <h3>Bachelor of Technology (B.Tech)</h3>
+      <h3>Bachelor of Technology</h3>
       <p><strong>Artificial Intelligence and Data Science</strong></p>
       <p>Mahendra College of Engineering</p>
-      <div class="tag-list">
+
+      <div class="tags">
         <span class="tag">Artificial Intelligence</span>
         <span class="tag">Data Science</span>
         <span class="tag">Data Analytics</span>
       </div>
-    </div>
+    </article>
   </div>
 </section>
 
 <!-- SKILLS -->
-<section id="skills" style="background:#f5f0ff">
+<section class="soft-section" id="skills">
   <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">What I'm learning</span>
+    <div class="heading">
+      <span class="eyebrow">My learning journey</span>
       <h2>Skills & Technologies</h2>
-      <p>My learning areas related to data analysis.</p>
+      <p>My current learning areas and technical interests.</p>
     </div>
 
-    <div class="grid three-col">
-      <div class="card skill-card">
+    <div class="grid three">
+      <article class="card">
         <div class="skill-icon">🐍</div>
         <h3>Python</h3>
         <p>Learning programming fundamentals and data handling.</p>
-      </div>
+      </article>
 
-      <div class="card skill-card">
+      <article class="card">
         <div class="skill-icon">🗄️</div>
         <h3>SQL</h3>
-        <p>Building knowledge of queries, filtering and data retrieval.</p>
-      </div>
+        <p>Learning queries, filtering and retrieving information.</p>
+      </article>
 
-      <div class="card skill-card">
+      <article class="card">
         <div class="skill-icon">📊</div>
         <h3>Excel</h3>
-        <p>Learning spreadsheet analysis, formulas and data organization.</p>
-      </div>
+        <p>Exploring spreadsheet formulas and data organization.</p>
+      </article>
 
-      <div class="card skill-card">
+      <article class="card">
         <div class="skill-icon">📈</div>
         <h3>Power BI</h3>
-        <p>Exploring dashboards and visual presentation of information.</p>
-      </div>
+        <p>Learning dashboards and data visualization concepts.</p>
+      </article>
 
-      <div class="card skill-card">
+      <article class="card">
         <div class="skill-icon">🧹</div>
         <h3>Data Cleaning</h3>
-        <p>Understanding missing values, duplicates and consistent data.</p>
-      </div>
+        <p>Understanding data consistency, duplicates and missing values.</p>
+      </article>
 
-      <div class="card skill-card">
-        <div class="skill-icon">🧠</div>
+      <article class="card">
+        <div class="skill-icon">💡</div>
         <h3>Problem Solving</h3>
-        <p>Developing logical thinking and analytical skills through practice.</p>
-      </div>
+        <p>Developing logical thinking through regular practice.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -553,71 +738,77 @@ footer span { color: var(--purple); }
 <!-- PROJECTS -->
 <section id="projects">
   <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Practice & exploration</span>
+    <div class="heading">
+      <span class="eyebrow">Practice projects</span>
       <h2>My Projects</h2>
-      <p>Interactive sample dashboards for learning data analysis. These use demonstration data, not real client data.</p>
+      <p>
+        Interactive sample-data demonstrations. These are practice demos,
+        not completed client projects or real business datasets.
+      </p>
     </div>
 
-    <div class="grid three-col">
+    <div class="grid three">
 
       <article class="card project-card">
         <span class="project-number">PROJECT 01</span>
         <h3>Sales Data Analysis</h3>
-        <p>Explore a sample sales dataset and compare categories, sales totals and order counts.</p>
-        <div class="tag-list">
+        <p>Explore sample sales totals and order counts by product category.</p>
+        <div class="tags">
           <span class="tag">Data Analysis</span>
-          <span class="tag">Dashboard</span>
+          <span class="tag">Sales</span>
         </div>
+
         <div class="demo">
-          <label for="salesFilter">Select product category</label>
+          <label for="salesFilter">Product category</label>
           <select id="salesFilter">
             <option value="all">All categories</option>
             <option value="electronics">Electronics</option>
             <option value="accessories">Accessories</option>
             <option value="home">Home</option>
           </select>
-          <div class="demo-result" id="salesResult" aria-live="polite"></div>
+          <div class="result" id="salesResult" aria-live="polite"></div>
         </div>
       </article>
 
       <article class="card project-card">
         <span class="project-number">PROJECT 02</span>
         <h3>Customer Insights</h3>
-        <p>Explore sample customer segments and see how the selected group changes the summary.</p>
-        <div class="tag-list">
+        <p>Explore example customer segments and compare their sample spending.</p>
+        <div class="tags">
           <span class="tag">Customer Data</span>
           <span class="tag">Insights</span>
         </div>
+
         <div class="demo">
-          <label for="customerFilter">Select customer segment</label>
+          <label for="customerFilter">Customer segment</label>
           <select id="customerFilter">
             <option value="all">All customers</option>
             <option value="regular">Regular</option>
             <option value="premium">Premium</option>
             <option value="occasional">Occasional</option>
           </select>
-          <div class="demo-result" id="customerResult" aria-live="polite"></div>
+          <div class="result" id="customerResult" aria-live="polite"></div>
         </div>
       </article>
 
       <article class="card project-card">
         <span class="project-number">PROJECT 03</span>
-        <h3>Interactive Data Dashboard</h3>
-        <p>Practice interpreting a sample dataset by filtering records and viewing updated totals.</p>
-        <div class="tag-list">
+        <h3>Regional Data Dashboard</h3>
+        <p>Filter a sample regional dataset and compare order and sales totals.</p>
+        <div class="tags">
+          <span class="tag">Dashboard</span>
           <span class="tag">Visualization</span>
-          <span class="tag">Interactive</span>
         </div>
+
         <div class="demo">
-          <label for="regionFilter">Select region</label>
+          <label for="regionFilter">Region</label>
           <select id="regionFilter">
             <option value="all">All regions</option>
             <option value="chennai">Chennai</option>
             <option value="coimbatore">Coimbatore</option>
             <option value="madurai">Madurai</option>
           </select>
-          <div class="demo-result" id="regionResult" aria-live="polite"></div>
+          <div class="result" id="regionResult" aria-live="polite"></div>
         </div>
       </article>
 
@@ -626,32 +817,31 @@ footer span { color: var(--purple); }
 </section>
 
 <!-- INTERESTS -->
-<section id="interests" style="background:#f5f0ff">
+<section class="soft-section" id="interests">
   <div class="container">
-    <div class="section-heading">
-      <span class="eyebrow">Beyond the classroom</span>
+    <div class="heading">
+      <span class="eyebrow">What interests me</span>
       <h2>Interests</h2>
-      <p>Areas I'm interested in exploring and developing.</p>
     </div>
 
-    <div class="grid three-col">
-      <div class="card interest-card">
+    <div class="grid three">
+      <article class="card interest-card">
         <div class="interest-icon">📊</div>
         <h3>Data Analytics</h3>
-        <p>Understanding trends and finding insights from data.</p>
-      </div>
+        <p>Understanding trends and discovering insights in data.</p>
+      </article>
 
-      <div class="card interest-card">
+      <article class="card interest-card">
         <div class="interest-icon">🤖</div>
         <h3>Artificial Intelligence</h3>
         <p>Exploring AI concepts and their real-world applications.</p>
-      </div>
+      </article>
 
-      <div class="card interest-card">
-        <div class="interest-icon">💡</div>
-        <h3>Continuous Learning</h3>
+      <article class="card interest-card">
+        <div class="interest-icon">💻</div>
+        <h3>Technology & Learning</h3>
         <p>Practising new skills and building useful projects.</p>
-      </div>
+      </article>
     </div>
   </div>
 </section>
@@ -659,51 +849,46 @@ footer span { color: var(--purple); }
 <!-- CERTIFICATES -->
 <section id="certificates">
   <div class="container">
-    <div class="section-heading">
+    <div class="heading">
       <span class="eyebrow">Learning milestones</span>
       <h2>Certificates</h2>
-      <p>Certificates from my learning journey.</p>
+      <p>Certificate images and PDF documents from my learning journey.</p>
     </div>
 
-    <div class="grid two-col">
+    <div class="grid two">
 
-      <!-- Certificate image 1 -->
       <article class="card certificate-card">
         <div class="certificate-preview">
           <img
-            src="WhatsApp%20Image%202026-10-28%20at%207.48.38%20PM.jpeg"
+            src="./WhatsApp%20Image%202026-10-28%20at%207.48.38%20PM.jpeg"
             alt="Certificate image 1"
             loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-          <div class="certificate-placeholder" style="display:none">
+            onerror="this.style.display='none';this.nextElementSibling.hidden=false;">
+          <div class="certificate-placeholder" hidden>
             <span>🏆</span>
-            <strong>Certificate image 1 not found</strong>
-            <p>Check the filename in your repository.</p>
+            Certificate image not found. Check its filename.
           </div>
         </div>
         <h3>Certificate 01</h3>
-        <p>Certificate image from my learning journey.</p>
+        <p>Certificate image.</p>
       </article>
 
-      <!-- Certificate image 2 -->
       <article class="card certificate-card">
         <div class="certificate-preview">
           <img
-            src="WhatsApp%20Image%202026-10-28%20at%207.48.39%20PM.jpeg"
+            src="./WhatsApp%20Image%202026-10-28%20at%207.48.39%20PM.jpeg"
             alt="Certificate image 2"
             loading="lazy"
-            onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
-          <div class="certificate-placeholder" style="display:none">
+            onerror="this.style.display='none';this.nextElementSibling.hidden=false;">
+          <div class="certificate-placeholder" hidden>
             <span>🏆</span>
-            <strong>Certificate image 2 not found</strong>
-            <p>Check the filename in your repository.</p>
+            Certificate image not found. Check its filename.
           </div>
         </div>
         <h3>Certificate 02</h3>
-        <p>Certificate image from my learning journey.</p>
+        <p>Certificate image.</p>
       </article>
 
-      <!-- C++ PDF -->
       <article class="card certificate-card">
         <div class="certificate-preview">
           <div class="certificate-placeholder">
@@ -712,4 +897,17 @@ footer span { color: var(--purple); }
             <p>PDF document</p>
           </div>
         </div>
-        <h3>C++ Certifica
+        <h3>C++ Certificate</h3>
+        <p>Open the original certificate PDF.</p>
+        <a class="btn"
+           href="./Shyam%20Saran%20N%20C%2B%2B%20Certificate.pdf"
+           target="_blank" rel="noopener">View C++ Certificate ↗</a>
+      </article>
+
+      <article class="card certificate-card">
+        <div class="certificate-preview">
+          <div class="certificate-placeholder">
+            <span>📄</span>
+            <strong>TATA Certificate</strong>
+            <p>PDF document</p>
+          <
