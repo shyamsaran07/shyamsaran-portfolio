@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customer Insights | Shyam Saran</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .project-detail {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .project-banner {
+            padding: 40px;
+            background: linear-gradient(135deg, #fff, #f7eaf1, #eae4f4);
+            border: 1px solid #eee5e9;
+            border-radius: 18px;
+            margin-bottom: 25px;
+        }
+
+        .project-detail h1,
+        .project-detail h2 {
+            font-family: "Playfair Display", serif;
+            margin-bottom: 15px;
+        }
+
+        .project-detail h1 {
+            font-size: clamp(30px, 5vw, 45px);
+        }
+
+        .project-detail p,
+        .project-detail li {
+            color: #817681;
+            font-size: 14px;
+        }
+
+        .project-panel {
+            background: white;
+            border: 1px solid #eee5e9;
+            border-radius: 14px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .project-detail table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+
+        .project-detail th,
+        .project-detail td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee5e9;
+        }
+
+        .project-detail th {
+            background: #f7eaf1;
+        }
+
+        .project-detail ul {
+            padding-left: 20px;
+        }
+
+        .project-detail li {
+            margin: 8px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #9470a5;
+        }
+
+        @media (max-width: 600px) {
+            .project-banner {
+                padding: 25px;
+            }
+
+            .project-panel {
+                padding: 15px;
+                overflow-x: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">SS<span>.</span></a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#education">Education</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main class="section project-detail">
+
+        <a href="index.html#projects" class="back-link">
+            ← Back to Portfolio
+        </a>
+
+
+        <div class="project-banner">
+
+            <p class="eyebrow">BUSINESS DATA ANALYTICS</p>
+
+            <h1>Customer Insights<span>.</span></h1>
+
+            <p>
+                A sample customer analytics project exploring
+                purchasing behaviour, spending and customer segments.
+            </p>
+
+            <div class="tags">
+                <span>Python</span>
+                <span>Data Analytics</span>
+                <span>Business Insights</span>
+            </div>
+
+        </div>
+
+
+        <section class="project-panel">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                Customer insights help businesses understand how
+                customers purchase products and how much they spend.
+                This project demonstrates basic analysis using
+                an illustrative customer dataset.
+            </p>
+
+        </section>
+
+
+        <section class="project-panel">
+
+            <h2>Sample Dataset</h2>
+
+            <p>
+                These are fictional example records for demonstrating
+                data analysis. They are not actual customer transactions.
+            </p>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Customer</th>
+                        <th>Orders</th>
+                        <th>Average Order Value (₹)</th>
+                        <th>Total Spending (₹)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Customer A</td>
+                        <td>3</td>
+                        <td>500</td>
+                        <td>1500</td>
+                    </tr>
+
+                    <tr>
+                        <td>Customer B</td>
+                        <td>5</td>
+                        <td>800</td>
+                        <td>4000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Customer C</td>
+                        <td>2</td>
+                        <td>400</td>
+                        <td>800</td>
+                    </tr>
+
+                    <tr>
+                        <td>Customer D</td>
+                        <td>6</td>
+                        <td>1000</td>
+                        <td>6000</td>
+                    </tr>
+
+                    <tr>
+                        <td>Customer E</td>
+                        <td>4</td>
+                        <td>650</td>
+                        <td>2600</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <section class="project-panel">
+
+            <h2>Python Code</h2>
+
+            <p>
+                This example calculates customer spending and
+                identifies the highest-spending customer.
+            </p>
+
+            <pre style="white-space: pre-wrap; overflow-wrap: anywhere;"><code>import pandas as pd
+
+data = {
+    "Customer": ["A", "B", "C", "D", "E"],
+    "Orders": [3, 5, 2, 6, 4],
+    "Average_Order_Value": [500, 800, 400, 1000, 650]
+}
+
+df = pd.DataFrame(data)
+
+df["Total_Spending"] = (
+    df["Orders"] * df["Average_Order_Value"]
+)
+
+print("Customer Dataset")
+print(df)
+
+print("\nTotal Customer Spending:")
+print(df["Total_Spending"].sum())
+
+print("\nAverage Customer Spending:")
+print(round(df["Total_Spending"].mean(), 2))
+
+print("\nHighest Spending Customer:")
+print(
+    df.loc[
+        df["Total_Spending"].idxmax()
+    ]
+)
+
+print("\nCustomers Sorted by Spending:")
+print(
+    df.sort_values(
+        by="Total_Spending",
+        ascending=False
+    )
+)</code></pre>
+
+        </section>
+
+
+        <section class="project-panel">
+
+            <h2>Key Findings</h2>
+
+            <ul>
+                <li>The illustrative dataset contains five customers.</li>
+                <li>Total spending across the sample is ₹14,900.</li>
+                <li>Average spending per customer is ₹2,980.</li>
+                <li>Customer D has the highest total spending in this sample.</li>
+            </ul>
+
+            <p>
+                These findings apply only to the sample data.
+                Real business decisions would require a larger,
+                representative dataset.
+            </p>
+
+        </section>
+
+
+        <section class="project-panel">
+
+            <h2>Tools Used</h2>
+
+            <div class="tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>Data Analysis</span>
+                <span>Customer Segmentation Concepts</span>
+            </div>
+
+        </section>
+
+
+        <a href="index.html#projects" class="button primary">
+            ← Back to Projects
+        </a>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <a href="index.html" class="logo">SS<span>.</span></a>
+
+        <p>Shyam Saran | Customer Insights</p>
+
+        <p class="copyright">
+            © <span id="year"></span> Shyam Saran
+        </p>
+
+    </footer>
+
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
