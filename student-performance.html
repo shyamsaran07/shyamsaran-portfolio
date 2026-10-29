@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Performance Analysis | Shyam Saran</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .project-detail {
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .project-banner {
+            padding: 40px;
+            background: linear-gradient(135deg, #fff, #f7eaf1, #eae4f4);
+            border: 1px solid #eee5e9;
+            border-radius: 18px;
+            margin-bottom: 25px;
+        }
+
+        .project-detail h1,
+        .project-detail h2 {
+            font-family: "Playfair Display", serif;
+            margin-bottom: 15px;
+        }
+
+        .project-detail h1 {
+            font-size: clamp(30px, 5vw, 45px);
+        }
+
+        .project-detail p,
+        .project-detail li {
+            color: #817681;
+            font-size: 14px;
+        }
+
+        .project-panel {
+            background: white;
+            border: 1px solid #eee5e9;
+            border-radius: 14px;
+            padding: 25px;
+            margin: 20px 0;
+        }
+
+        .project-detail table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+
+        .project-detail th,
+        .project-detail td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee5e9;
+        }
+
+        .project-detail th {
+            background: #f7eaf1;
+        }
+
+        .project-detail ul {
+            padding-left: 20px;
+        }
+
+        .project-detail li {
+            margin: 8px 0;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #9470a5;
+        }
+
+        @media (max-width: 600px) {
+            .project-banner {
+                padding: 25px;
+            }
+
+            .project-panel {
+                padding: 15px;
+                overflow-x: auto;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">SS<span>.</span></a>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#education">Education</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <main class="section project-detail">
+
+        <a href="index.html#projects" class="back-link">
+            ← Back to Portfolio
+        </a>
+
+
+        <div class="project-banner">
+
+            <p class="eyebrow">DATA ANALYTICS PROJECT</p>
+
+            <h1>Student Performance Analysis<span>.</span></h1>
+
+            <p>
+                An educational data analysis demonstration exploring
+                how study hours and attendance relate to student scores.
+            </p>
+
+            <div class="tags">
+                <span>Python</span>
+                <span>Data Analysis</span>
+                <span>Education</span>
+            </div>
+
+        </div>
+
+
+        <section class="project-panel">
+
+            <h2>Project Overview</h2>
+
+            <p>
+                This project uses a small illustrative dataset to
+                demonstrate how student scores can be summarized
+                and compared with study hours and attendance.
+            </p>
+
+        </section>
+
+
+        <section class="project-panel">
+
+            <h2>Sample Dataset</h2>
+
+            <p>
+                The following values are fictional examples created
+                for demonstrating data analysis. They are not actual
+                student records.
+            </p>
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Student</th>
+                        <th>Study Hours</th>
+                        <th>Attendance (%)</th>
+                        <th>Score (%)</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Student A</td>
+                        <td>2</td>
+                        <td>70</td>
+                        <td>55</td>
+                    </tr>
+
+                    <tr>
+                        <td>Student B</td>
+                        <td>4</td>
+                        <td>80</td>
+                        <td>68</td>
+                    </tr>
+
+                    <tr>
+                        <td>Student C</td>
+                        <td>5</td>
+                        <td>85</td>
+                        <td>76</td>
+                    </tr>
+
+                    <tr>
+                        <td>Student D</td>
+                        <td>7</td>
+                        <td>90</td>
+                        <td>88</td>
+                    </tr>
+
+                    <tr>
+                        <td>Student E</td>
+                        <td>3</td>
+                        <td>75</td>
+                        <td>62</td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </section>
+
+
+        <section class="project-panel">
+
+            <h2>Python Code</h2>
+
+            <p>
+                The following Python example calculates the average
+                score and compares study hours with scores.
+            </p>
+
+            <pre style="white-space: pre-wrap; overflow-wrap: anywhere;"><code>import pandas as pd
+
+data = {
+    "Student": ["A", "B", "C", "D", "E"],
+    "Study_Hours": [2, 4, 5, 7, 3],
+    "Attendance": [70, 80, 85, 90, 75],
+    "Score": [55, 68, 76, 88, 62]
+}
+
+df = pd.DataFrame(data)
+
+print("Student Performance Dataset")
+print(df)
+
+print("\nAverage Score:")
+print(df["Score"].mean())
+
+print("\nAverage Attendance:")
+print(df["Attendance"].mean())
+
+print("\nStudy Hours and Scores:")
+print(df[["Study_Hours", "Score"]])
+
+correlation = df["Study_Hours"].corr(df["Score"])
+
+print("\nStudy Hours / Score Correlation:")
+print(round(correlation, 2))</code></pre>
+
+        </section>
+
+
+        <section class="project-panel">
+
+            <h2>Key Findings</h2>
+
+            <ul>
+                <li>The sample dataset contains five illustrative students.</li>
+                <li>The average score is 69.8 out of 100.</li>
+                <li>The average attendance is 80%.</li>
+                <li>The example shows a positive relationship between study hours and scores.</li>
+            </ul>
+
+            <p>
+                These results describe only the illustrative sample.
+                They do not establish that study hours alone determine
+                academic performance.
+            </p>
+
+        </section>
+
+
+        <section class="project-panel">
+
+            <h2>Tools Used</h2>
+
+            <div class="tags">
+                <span>Python</span>
+                <span>Pandas</span>
+                <span>DataFrames</span>
+                <span>Descriptive Statistics</span>
+            </div>
+
+        </section>
+
+
+        <a href="index.html#projects" class="button primary">
+            ← Back to Projects
+        </a>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <a href="index.html" class="logo">SS<span>.</span></a>
+
+        <p>Shyam Saran | Student Performance Analysis</p>
+
+        <p class="copyright">
+            © <span id="year"></span> Shyam Saran
+        </p>
+
+    </footer>
+
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
